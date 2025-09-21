@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ghulam Mustafa Rao — Game & Dev Portfolio</title>
+  <meta name="description" content="Portfolio — Unity Game Developer, projects, screenshots, videos, Play Store links" />
+  <style>
+    :root{--bg:#ffffff;--muted:#6b7280;--accent:#0f172a;--card:#f8fafc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--accent);line-height:1.45}
+    .container{max-width:1100px;margin:36px auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#eef2ff,#e0f2fe);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:clamp(20px,3.5vw,32px)}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:28px;align-items:start}
+    .about{background:var(--card);padding:20px;border-radius:12px}
+    .cv-actions{margin-top:12px;display:flex;gap:8px}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid #e6e9ef;background:#fff;cursor:pointer;text-decoration:none;color:inherit;display:inline-block}
+
+    .projects{margin-top:28px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid #eef2f6}
+    .thumb{width:100%;height:140px;border-radius:8px;background:linear-gradient(180deg,#f1f5f9,#fff);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    .meta{margin-top:10px}
+    .meta .title{font-weight:600;font-size:18px}
+    .meta .sub{font-size:13px;color:var(--muted);margin-top:4px}
+    .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:#fff;border:1px solid #e6edf3}
+
+    .gallery{margin-top:12px;overflow-x:auto;display:flex;gap:10px;padding-bottom:10px}
+    .gallery::-webkit-scrollbar{height:8px}
+    .gallery::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px}
+    .screenshot{flex:0 0 auto;width:200px;height:120px;border-radius:8px;background:#fff;border:1px solid #e6edf3;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+    .video{flex:0 0 auto;width:240px;height:135px;border-radius:8px;background:#000;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
+
+    footer{margin:48px 0 80px;text-align:center;color:var(--muted);font-size:14px}
+
+    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">GM</div>
+        <div>
+          <h1 id="site-name">Ghulam Mustafa Rao — Game & Dev Portfolio</h1>
+          <p class="lead" id="tagline">Unity Game Developer · Multiplayer · Mobile · AI</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield">Play Store</a>
+        <a class="btn" href="https://github.com/Ghulam-Mustafa-Rao">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/ghulammustafarao/">LinkedIn</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="about">
+          <h2>About</h2>
+          <p id="about-text">Accomplished Unity Game Developer with 3+ years of coding experience in C# and Unity. Experienced in FPS, simulation, puzzle, PC, and blockchain games with advanced AI, optimized performance, and engaging mechanics. Skilled in monetization (Google Ads, AppLovin, IronSource), analytics (Firebase, Appsflyer, Game Analytics), and multiplayer systems (Photon, Mirror, Fusion 2).</p>
+          <div class="cv-actions">
+            <a class="btn" href="Ghulam_Mustafa_Rao_Games.pdf" download>Download CV</a>
+          </div>
+
+          <h3 style="margin-top:14px">Skills</h3>
+          <div class="tags">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Photon / Mirror / Fusion 2</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Game AI</span>
+            <span class="tag">Ads & Monetization</span>
+            <span class="tag">Git / Plastic SCM</span>
+            <span class="tag">Unity Timeline</span>
+            <span class="tag">Cinemachine</span>
+            <span class="tag">Profiler</span>
+          </div>
+        </div>
+
+        <section class="projects">
+          <h2 style="margin-bottom:12px">Selected Projects</h2>
+
+          <article class="card">
+            <div class="meta">
+              <div class="title">FPS Shooting Game</div>
+              <div class="gallery">
+                <div class="screenshot">IMG 1</div>
+                <div class="screenshot">IMG 2</div>
+                <div class="video">Video</div>
+              </div>
+              <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+                <li>Enhanced controls & AI</li>
+                <li>New Machine Gun Mode & TDM</li>
+                <li>Day/Night Lighting & Shooting Range</li>
+                <li>In-App Purchases, Ads, Profiler Optimization</li>
+                <li>Reduced ANRs</li>
+              </ul>
+              <div style="margin-top:10px">
+                <a class="btn" href="https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield">View on Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta">
+              <div class="title">Donut Empire Tycoon</div>
+              <div class="gallery">
+                <div class="screenshot">IMG 1</div>
+                <div class="video">Video</div>
+              </div>
+              <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+                <li>Built from scratch with unique management mechanics</li>
+                <li>Added toilets, pickups (car & in-person), tables</li>
+                <li>Staff management, player stats & upgrades</li>
+                <li>Different AI behaviours for immersion</li>
+                <li>Monetization: In-app purchases</li>
+              </ul>
+              <div style="margin-top:10px">
+                <a class="btn" href="https://play.google.com/store/apps/details?id=com.mt.donut.please.idle.tycoon.games">View on Play Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta">
+              <div class="title">Scary Halen Naughty Kid Game</div>
+              <div class="gallery">
+                <div class="screenshot">IMG 1</div>
+                <div class="video">Video</div>
+              </div>
+              <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+                <li>Built from scratch with immersive cutscenes (Unity Timeline + Cinemachine)</li>
+                <li>Daily Rewards, Spin Wheel, Ads</li>
+                <li>Power-ups: Hint, 2x Speed, Invisible, Shape-Shift</li>
+              </ul>
+              <div style="margin-top:10px">
+                <a class="btn" href="https://apkpure.com/scary-halen-naughty-kid-game/com.pw.scaryhalen.babysitter.naughtyboy">View on APKPure</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta">
+              <div class="title">Color Sort - Multiplayer PvP</div>
+              <div class="gallery">
+                <div class="screenshot">IMG 1</div>
+                <div class="screenshot">IMG 2</div>
+                <div class="video">Video</div>
+              </div>
+              <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+                <li>Built from scratch with multiplayer modes</li>
+                <li>AI opponents & real-player PvP</li>
+                <li>Powers: Undo, Hint, Add Glass, Tap-to-Drain</li>
+                <li>Leaderboard, Shop, VIP Subscription</li>
+                <li>Spin Wheel, Ads Integration</li>
+              </ul>
+              <div style="margin-top:10px">
+                <a class="btn" href="https://drive.google.com/file/d/1qyJOsHpTqWo77vftiG3-5P_i7KYdd4La/view?usp=sharing">Download Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta">
+              <div class="title">Construction Crush</div>
+              <div class="gallery">
+                <div class="screenshot">IMG 1</div>
+                <div class="screenshot">IMG 2</div>
+                <div class="video">Video</div>
+              </div>
+              <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+                <li>Built from scratch with complete UI/UX design</li>
+                <li>Level design: 100+ levels with varied tiles (slime, cemented, etc.)</li>
+                <li>Power-ups: Break a tile, multiple boosters</li>
+              </ul>
+              <div style="margin-top:10px">
+                <a class="btn" href="https://apkpure.com/construction-crush/com.RSS.ConstructionCrush">View on APKPure</a>
+              </div>
+            </div>
+          </article>
+
+        </section>
+      </div>
+
+      <aside style="width:100%;max-width:320px">
+        <div class="card" style="position:sticky;top:24px">
+          <h3>Contact</h3>
+          <div style="margin-top:8px">
+            <div style="font-size:13px;color:var(--muted)">Email</div>
+            <div id="email">ghulam.mustafa.rao.dev@gmail.com</div>
+          </div>
+          <div style="margin-top:8px">
+            <div style="font-size:13px;color:var(--muted)">Phone</div>
+            <div id="phone">+92 320 9343671</div>
+          </div>
+          <div style="margin-top:8px">
+            <div style="font-size:13px;color:var(--muted)">Location</div>
+            <div id="location">Islamabad, Pakistan</div>
+          </div>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid #eef2f6" />
+          <h4 style="margin:0 0 8px">Quick Links</h4>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a class="btn" href="https://github.com/Ghulam-Mustafa-Rao">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/ghulammustafarao/">LinkedIn</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      Built with ❤️ by Ghulam Mustafa Rao • <span id="year"></span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
