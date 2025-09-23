@@ -147,9 +147,13 @@
           <article class="card">
             <div class="meta">
               <div class="title">Color Sort - Multiplayer PvP</div>
-              <div class="gallery">
-                <div class="screenshot">IMG 1</div>
-                <div class="screenshot">IMG 2</div>
+              <div class="gallery" data-folder="assets/img/Color Sort - Multiplayer PvP">
+                <!-- <div class="screenshot">
+                  <img src="assets/img/Color Sort - Multiplayer PvP/0.jpeg"/>
+                </div> 
+                <div class="screenshot">
+                  <img src="assets/img/Color Sort - Multiplayer PvP/1.jpeg"/>
+                </div>                 -->
                 <div class="video">Video</div>
               </div>
               <ul style="font-size:13px;color:var(--muted);margin-top:6px">
@@ -278,6 +282,39 @@
       </aside>
     </section>
 
+    <script>
+      document.querySelectorAll(".gallery").forEach(gallery => {
+        const folder = gallery.dataset.folder;
+      
+        let i = 0;
+        function loadNext() {
+          const img = new Image();
+          img.src = `${folder}/${i}.jpeg`;
+        
+          img.onload = () => {
+            const div = document.createElement("div");
+            div.className = "screenshot";
+            div.appendChild(img);
+          
+            const videoBlock = gallery.querySelector(".video");
+            if (videoBlock) {
+              gallery.insertBefore(div, videoBlock);
+            } else {
+              gallery.appendChild(div);
+            }
+          
+            i++;
+            loadNext(); // keep going
+          };
+        
+          img.onerror = () => {
+            console.log(`No more images after ${i - 1}`);
+          };
+        }
+      
+        loadNext();
+      });
+    </script>
     <footer>
       Built with ❤️ by Ghulam Mustafa Rao • <span id="year"></span>
     </footer>
