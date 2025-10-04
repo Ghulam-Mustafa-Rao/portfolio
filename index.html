@@ -165,11 +165,10 @@
 <script>
 async function loadProjects() {
   try {
-    const res = await fetch("GamesData.json"); // your JSON file
+    const res = await fetch("GamesData.json");
     const projects = await res.json();
-    const container = document.querySelector(".projects"); // section container
+    const container = document.querySelector(".projects");
 
-    // Clear placeholder content (if any)
     container.innerHTML = `
       <h2>Selected Projects</h2>
       <div id="projects-container"></div>
@@ -181,7 +180,6 @@ async function loadProjects() {
       const article = document.createElement("article");
       article.className = "card";
 
-      // Convert description string into <li> items
       const descItems = proj.Description.split(";")
         .map(d => `<li>${d.trim()}</li>`)
         .join("");
@@ -190,7 +188,6 @@ async function loadProjects() {
         <div class="meta">
           <div class="title">${proj.Title}</div>
           <div class="gallery" data-folder="${proj.Folder}">
-            <!-- images will be inserted here -->
             <div class="video">Video</div>
           </div>
           <ul style="font-size:13px;color:var(--muted);margin-top:6px">
@@ -207,7 +204,7 @@ async function loadProjects() {
       projectsContainer.appendChild(article);
     });
 
-    // Load screenshots dynamically
+    // Now load images for each gallery
     document.querySelectorAll(".gallery").forEach(gallery => {
       const folder = gallery.dataset.folder;
       if (!folder) return;
@@ -226,14 +223,14 @@ async function loadProjects() {
           const videoBlock = gallery.querySelector(".video");
           gallery.insertBefore(div, videoBlock);
 
-          // ✅ add click handler for lightbox right here
+          // Lightbox binding
           img.addEventListener("click", () => {
             lightbox.style.display = "flex";
             lightboxImg.src = img.src;
           });
 
           i++;
-          loadNext();
+          loadNext(); // keep going until error
         };
 
         img.onerror = () => {
@@ -251,13 +248,14 @@ async function loadProjects() {
 
 loadProjects();
 
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Lightbox script (global)
+// Lightbox setup
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = lightbox.querySelector("img");
 lightbox.addEventListener("click", () => lightbox.style.display = "none");
+
+document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 
 </body>
 </html>
