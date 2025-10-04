@@ -88,7 +88,7 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo"><img src="assets/profile.jpg" alt="Profile" /></div>
+        <div class="logo"><img src="assets/profile.jpeg" alt="Profile" /></div>
         <div>
           <h1>Ghulam Mustafa Rao</h1>
           <p class="lead">Unity Game Developer · Multiplayer · Mobile · AI</p>
@@ -206,40 +206,81 @@ async function loadProjects() {
 
     // Now load images for each gallery
     document.querySelectorAll(".gallery").forEach(gallery => {
-      const folder = gallery.dataset.folder;
-      if (!folder) return;
+  const folder = gallery.dataset.folder;
+  if (!folder) return;
 
-      let i = 0;
-      function loadNext() {
-        const img = new Image();
-        img.src = `${folder}/${i}.jpeg`;
-        img.loading = "lazy";
+  let i = 0;
+  function loadNext() {
+    const imgPath = `${folder}/${i}.jpeg`;
+    console.log("Trying:", imgPath);
 
-        img.onload = () => {
-          const div = document.createElement("div");
-          div.className = "screenshot";
-          div.appendChild(img);
+    const img = new Image();
+    img.src = imgPath;
+    img.loading = "lazy";
 
-          const videoBlock = gallery.querySelector(".video");
-          gallery.insertBefore(div, videoBlock);
+    img.onload = () => {
+      console.log("Loaded:", imgPath);
 
-          // Lightbox binding
-          img.addEventListener("click", () => {
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-          });
+      const div = document.createElement("div");
+      div.className = "screenshot";
+      div.appendChild(img);
 
-          i++;
-          loadNext(); // keep going until error
-        };
+      const videoBlock = gallery.querySelector(".video");
+      gallery.insertBefore(div, videoBlock);
 
-        img.onerror = () => {
-          console.log(`Finished loading images from ${folder}`);
-        };
-      }
+      // Lightbox
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
 
-      loadNext();
-    });
+      i++;
+      loadNext(); // try next index
+    };
+
+    img.onerror = () => {
+      console.warn("Not found, stopping at:", imgPath);
+    };
+  }
+
+  loadNext();
+});
+
+    // document.querySelectorAll(".gallery").forEach(gallery => {
+    //   const folder = gallery.dataset.folder;
+    //   if (!folder) return;
+
+    //   let i = 0;
+    //   function loadNext() {
+    //     const img = new Image();
+    //     img.src = `${folder}/${i}.jpeg`;
+    //     img.loading = "lazy";
+
+    //     img.onload = () => {
+    //       const div = document.createElement("div");
+    //       div.className = "screenshot";
+    //       div.appendChild(img);
+
+    //       const videoBlock = gallery.querySelector(".video");
+    //       gallery.insertBefore(div, videoBlock);
+
+    //       // Lightbox binding
+    //       img.addEventListener("click", () => {
+    //         lightbox.style.display = "flex";
+    //         lightboxImg.src = img.src;
+    //       });
+
+    //       i++;
+    //       loadNext(); // keep going until error
+    //     };
+
+    //     img.onerror = () => {
+    //       console.log(`Finished loading images from ${folder}`);
+    //     };
+    //   }
+
+    //   loadNext();
+    // });
 
   } catch (err) {
     console.error("Error loading GamesData.json:", err);
