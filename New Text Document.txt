@@ -1,0 +1,192 @@
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">GM</div>
+        <div>
+          <h1 id="site-name">Ghulam Mustafa Rao — Game & Dev Portfolio</h1>
+          <p class="lead" id="tagline">Unity Game Developer · Multiplayer · Mobile · AI</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="https://github.com/Ghulam-Mustafa-Rao">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/ghulammustafarao/">LinkedIn</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="about">
+          <h2>About</h2>
+          <p id="about-text">Accomplished Unity Game Developer with 3+ years of coding experience in C# and Unity. Experienced in FPS, simulation, puzzle, PC, and blockchain games with advanced AI, optimized performance, and engaging mechanics. Skilled in monetization (Google Ads, AppLovin, IronSource), analytics (Firebase, Appsflyer, Game Analytics), and multiplayer systems (Photon, Mirror, Fusion 2).</p>
+          <div class="cv-actions">
+            <a class="btn" href="Ghulam_Mustafa_Rao_Games.pdf" download>Download CV</a>
+          </div>
+
+          <h3 style="margin-top:14px">Skills</h3>
+          <div class="tags">
+            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Photon / Mirror / Fusion 2</span>
+            <span class="tag">Firebase</span><span class="tag">Game AI</span><span class="tag">Ads & Monetization</span>
+            <span class="tag">Git / Plastic SCM</span><span class="tag">Unity Timeline</span>
+            <span class="tag">Cinemachine</span><span class="tag">Profiler</span>
+          </div>
+        </div>
+
+        <section class="projects">
+          <h2 style="margin-bottom:12px">Selected Projects</h2>
+
+          <!-- ✅ Your projects remain unchanged (galleries auto-scroll individually) -->
+          <article class="card"><div class="meta">
+            <div class="title">FPS Shooting Game</div>
+            <div class="gallery" data-folder="assets/img/FPS Shooting Game"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Enhanced controls & AI</li><li>New Machine Gun Mode & TDM</li>
+              <li>Day/Night Lighting & Shooting Range</li>
+              <li>In-App Purchases, Ads, Profiler Optimization</li>
+              <li>Reduced ANRs</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield">View on Play Store</a></div>
+          </div></article>
+
+          <!-- ✅ repeat other projects (same structure, no change needed) -->
+<article class="card"><div class="meta">
+            <div class="title">Donut Empire Tycoon</div>
+            <div class="gallery" data-folder="assets/img/Donut Empire Tycoon"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Built from scratch with unique management mechanics</li>
+              <li>Added toilets, pickups (car & in-person), tables</li>
+              <li>Staff management, player stats & upgrades</li>
+              <li>Different AI behaviours for immersion</li>
+              <li>Monetization: In-app purchases</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mt.donut.please.idle.tycoon.games">View on Play Store</a></div>
+          </div></article>
+
+          <article class="card"><div class="meta">
+            <div class="title">Scary Halen Naughty Kid Game</div>
+            <div class="gallery" data-folder="assets/img/Scary Halen Naughty Kid Game"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Built from scratch with immersive cutscenes (Unity Timeline + Cinemachine)</li>
+              <li>Daily Rewards, Spin Wheel, Ads</li>
+              <li>Power-ups: Hint, 2x Speed, Invisible, Shape-Shift</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://apkpure.com/scary-halen-naughty-kid-game/com.pw.scaryhalen.babysitter.naughtyboy">View on APKPure</a></div>
+          </div></article>
+
+          <article class="card"><div class="meta">
+            <div class="title">Color Sort - Multiplayer PvP</div>
+            <div class="gallery" data-folder="assets/img/Color Sort - Multiplayer PvP"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Built from scratch with multiplayer modes</li>
+              <li>AI opponents & real-player PvP</li>
+              <li>Powers: Undo, Hint, Add Glass, Tap-to-Drain</li>
+              <li>Leaderboard, Shop, VIP Subscription</li>
+              <li>Spin Wheel, Ads Integration</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://drive.google.com/file/d/1qyJOsHpTqWo77vftiG3-5P_i7KYdd4La/view?usp=sharing">Download Demo</a></div>
+          </div></article>
+
+          <article class="card"><div class="meta">
+            <div class="title">Commando Gun Shooting</div>
+            <div class="gallery" data-folder="assets/img/Commando Gun Shooting"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Enhanced overall controls</li><li>Improved AI for more realistic gameplay</li>
+              <li>Team Deathmatch (TDM) mode</li><li>Day/Night lighting system</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.fps.shooting.counterattack.commandomissiongames">View on Play Store</a></div>
+          </div></article>
+
+          <article class="card"><div class="meta">
+            <div class="title">Doctor Simulator Surgery</div>
+            <div class="gallery" data-folder="assets/img/Doctor Simulator Surgery"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Fixed gameplay bugs for stability</li>
+              <li>Integrated Ads for monetization</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.dino.hunting.dinosaur.hunt.best.sniper.shooting.games">View on Play Store</a></div>
+          </div></article>
+
+          <article class="card"><div class="meta">
+            <div class="title">Zombie Shooter</div>
+            <div class="gallery" data-folder="assets/img/Zombie Shooter"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Enhanced AI for smarter enemy behaviors</li>
+              <li>Integrated Ads for monetization</li>
+              <li>Fixed overall gameplay bugs for smoother experience</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.fps.zombie.shootinggames.survivalgames.gungames">View on Play Store</a></div>
+          </div></article>
+
+          <article class="card"><div class="meta">
+            <div class="title">Construction Crush</div>
+            <div class="gallery" data-folder="assets/img/Construction Crush"><div class="video">Video</div></div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              <li>Built from scratch with complete UI/UX design</li>
+              <li>Level design: 100+ levels with varied tiles (slime, cemented, etc.)</li>
+              <li>Power-ups: Break a tile, multiple boosters</li>
+            </ul>
+            <div style="margin-top:10px"><a class="btn" href="https://apkpure.com/construction-crush/com.RSS.ConstructionCrush">View on APKPure</a></div>
+          </div></article>
+        </section>
+      </div>
+
+      <aside style="width:100%;max-width:320px">
+        <div class="card" style="position:sticky;top:24px">
+          <h3>Contact</h3>
+          <div style="margin-top:8px"><div style="font-size:13px;color:var(--muted)">Email</div><div id="email">ghulam.mustafa.rao.dev@gmail.com</div></div>
+          <div style="margin-top:8px"><div style="font-size:13px;color:var(--muted)">Phone</div><div id="phone">+92 320 9343671</div></div>
+          <div style="margin-top:8px"><div style="font-size:13px;color:var(--muted)">Location</div><div id="location">Islamabad, Pakistan</div></div>
+          <hr style="margin:12px 0;border:none;border-top:1px solid #eef2f6" />
+          <h4 style="margin:0 0 8px">Quick Links</h4>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a class="btn" href="https://github.com/Ghulam-Mustafa-Rao">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/ghulammustafarao/">LinkedIn</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <script>
+      document.querySelectorAll(".gallery").forEach(gallery => {
+        const folder = gallery.dataset.folder;
+        if (!folder) return;
+
+        let i = 0;
+        function loadNext() {
+          const img = new Image();
+          img.src = `${folder}/${i}.jpeg`;
+
+          img.onload = () => {
+            const div = document.createElement("div");
+            div.className = "screenshot";
+            div.appendChild(img);
+
+            const videoBlock = gallery.querySelector(".video");
+            if (videoBlock) {
+              gallery.insertBefore(div, videoBlock);
+            } else {
+              gallery.appendChild(div);
+            }
+
+            i++;
+            loadNext();
+          };
+
+          img.onerror = () => {
+            console.log(`Finished loading images from ${folder}`);
+          };
+        }
+
+        loadNext();
+      });
+    </script>
+
+    <footer>
+      Built with ❤️ by Ghulam Mustafa Rao • <span id="year"></span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body> 

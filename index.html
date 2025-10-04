@@ -5,76 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ghulam Mustafa Rao — Game & Dev Portfolio</title>
   <meta name="description" content="Portfolio — Unity Game Developer, projects, screenshots, videos, Play Store links" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ghulam Mustafa Rao — Game & Dev Portfolio" />
+  <meta property="og:description" content="Unity Game Developer specializing in Multiplayer & Mobile Games." />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta property="og:type" content="website" />
+
   <style>
-    :root{--bg:#ffffff;--muted:#6b7280;--accent:#0f172a;--card:#f8fafc}
+    :root{
+      --bg:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f172a;
+      --card:#f8fafc;
+      --primary:#2563eb;
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--accent);line-height:1.45}
-    .container{max-width:1100px;margin:36px auto;padding:0 20px}
-    header{display:flex;align-items:center;justify-content:space-between}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+      background:var(--bg);
+      color:var(--accent);
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px 0}
     .brand{display:flex;gap:16px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#eef2ff,#e0f2fe);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .logo img{width:56px;height:56px;border-radius:50%}
     h1{margin:0;font-size:clamp(20px,3.5vw,32px)}
     p.lead{margin:8px 0 0;color:var(--muted)}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:28px;align-items:start}
+
+    nav a{margin-left:8px}
+
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid #e6e9ef;background:#fff;cursor:pointer;text-decoration:none;color:inherit;display:inline-block;text-align:center;transition:all .2s}
+    .btn-primary{background:var(--primary);color:#fff;border:none}
+    .btn:hover{transform:translateY(-2px)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:28px;align-items:start}
+
     .about{background:var(--card);padding:20px;border-radius:12px}
-    .cv-actions{margin-top:12px;display:flex;gap:8px}
-    .btn{padding:10px 14px;border-radius:8px;border:1px solid #e6e9ef;background:#fff;cursor:pointer;text-decoration:none;color:inherit;display:inline-block}
+    .cv-actions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
 
-    .projects{margin-top:28px}
-    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid #eef2f6;margin-bottom:20px}
-    .meta{margin-top:10px}
-    .meta .title{font-weight:600;font-size:18px}
-    .meta .sub{font-size:13px;color:var(--muted);margin-top:4px}
     .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:#fff;border:1px solid #e6edf3}
+    .tag{font-size:12px;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid #e6edf3}
 
-    /* GALLERY FIX */
-    /* .gallery{margin-top:12px;overflow-x:auto;display:flex;gap:10px;padding-bottom:10px} */
-    .gallery {
-  margin-top: 12px;
-  max-width: 100%;       /* 🔑 keep inside card */
-  overflow-x: auto;      /* 🔑 enable horizontal scroll per gallery */
-  display: flex;
-  flex-wrap: nowrap;     /* 🔑 force single row */
-  gap: 10px;
-  padding-bottom: 10px;
-}
+    .projects{margin-top:40px}
+    .projects h2{margin-bottom:16px}
+    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef2f6;margin-bottom:20px}
+    .meta{margin-top:10px}
+    .meta .title{font-weight:700;font-size:20px;margin-bottom:8px}
+
+    .gallery{margin-top:12px;max-width:100%;overflow-x:auto;display:flex;flex-wrap:nowrap;gap:10px;padding-bottom:10px}
     .gallery::-webkit-scrollbar{height:8px}
     .gallery::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px}
-    /* .screenshot{flex:0 0 auto;height:200px;width:auto;min-width:120px;max-width:300px;border-radius:8px;background:#fff;border:1px solid #e6edf3;display:flex;align-items:center;justify-content:center;overflow:hidden} */
-    /* .screenshot img{height:100%;width:auto;object-fit:contain} */
-    .video{flex:0 0 auto;height:200px;width:355px;border-radius:8px;background:#000;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
 
-.screenshot {
-  flex: 0 0 auto;        /* 🔑 no shrinking */
-  height: 200px;
-  border-radius: 8px;
-  background: #fff;
-  border: 1px solid #e6edf3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+    .screenshot{flex:0 0 auto;height:220px;border-radius:8px;background:#fff;border:1px solid #e6edf3;overflow:hidden;cursor:pointer}
+    .screenshot img{height:100%;width:auto;object-fit:contain;display:block}
 
-.screenshot img {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-}
+    .video{flex:0 0 auto;height:220px;width:320px;border-radius:8px;background:#000;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
+
     footer{margin:48px 0 80px;text-align:center;color:var(--muted);font-size:14px}
 
-    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+    /* Lightbox */
+    .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;z-index:9999}
+    .lightbox img{max-height:90%;max-width:90%;border-radius:12px}
+
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr}
+      aside{max-width:100%!important;margin-top:20px}
+      .screenshot{height:180px}
+      .video{height:160px;width:240px}
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">GM</div>
+        <div class="logo"><img src="assets/profile.jpg" alt="Profile" /></div>
         <div>
-          <h1 id="site-name">Ghulam Mustafa Rao — Game & Dev Portfolio</h1>
-          <p class="lead" id="tagline">Unity Game Developer · Multiplayer · Mobile · AI</p>
+          <h1>Ghulam Mustafa Rao</h1>
+          <p class="lead">Unity Game Developer · Multiplayer · Mobile · AI</p>
         </div>
       </div>
       <nav>
@@ -87,135 +104,121 @@
       <div>
         <div class="about">
           <h2>About</h2>
-          <p id="about-text">Accomplished Unity Game Developer with 3+ years of coding experience in C# and Unity. Experienced in FPS, simulation, puzzle, PC, and blockchain games with advanced AI, optimized performance, and engaging mechanics. Skilled in monetization (Google Ads, AppLovin, IronSource), analytics (Firebase, Appsflyer, Game Analytics), and multiplayer systems (Photon, Mirror, Fusion 2).</p>
+          <p>Hi, I’m <strong>Ghulam Mustafa Rao</strong>, an accomplished Unity Game Developer with 3+ years of coding experience in C# and Unity. I’ve built FPS, simulation, puzzle, PC, and blockchain games with advanced AI, optimized performance, and engaging mechanics.</p>
+          <p>Skilled in monetization (Google Ads, AppLovin, IronSource), analytics (Firebase, Appsflyer, Game Analytics), and multiplayer systems (Photon, Mirror, Fusion 2).</p>
           <div class="cv-actions">
-            <a class="btn" href="Ghulam_Mustafa_Rao_Games.pdf" download>Download CV</a>
+            <a class="btn btn-primary" href="Ghulam_Mustafa_Rao_Games.pdf" download>Download CV</a>
           </div>
-
           <h3 style="margin-top:14px">Skills</h3>
           <div class="tags">
             <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Photon / Mirror / Fusion 2</span>
             <span class="tag">Firebase</span><span class="tag">Game AI</span><span class="tag">Ads & Monetization</span>
-            <span class="tag">Git / Plastic SCM</span><span class="tag">Unity Timeline</span>
-            <span class="tag">Cinemachine</span><span class="tag">Profiler</span>
+            <span class="tag">Git / Plastic SCM</span><span class="tag">Timeline & Cinemachine</span>
           </div>
         </div>
 
         <section class="projects">
-          <h2 style="margin-bottom:12px">Selected Projects</h2>
+          <h2>Selected Projects</h2>
+          
+          <!-- <article class="card">
+            <div class="meta">
+              <div class="title">FPS Shooting Game</div>
+              <div class="gallery" data-folder="assets/img/FPS Shooting Game">
+                <div class="screenshot"></div>
+                <div class="video">Video</div>
+              </div>
+              <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+                <li>Enhanced controls & AI</li>
+                <li>Day/Night Lighting & Shooting Range</li>
+                <li>In-App Purchases, Ads, Profiler Optimization</li>
+              </ul>
+              <div style="margin-top:10px"><a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield">View on Play Store</a></div>
+            </div>
+          </article> -->
 
-          <article class="card"><div class="meta">
-            <div class="title">FPS Shooting Game</div>
-            <div class="gallery" data-folder="assets/img/FPS Shooting Game"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Enhanced controls & AI</li><li>New Machine Gun Mode & TDM</li>
-              <li>Day/Night Lighting & Shooting Range</li>
-              <li>In-App Purchases, Ads, Profiler Optimization</li>
-              <li>Reduced ANRs</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield">View on Play Store</a></div>
-          </div></article>
-
-          <article class="card"><div class="meta">
-            <div class="title">Donut Empire Tycoon</div>
-            <div class="gallery" data-folder="assets/img/Donut Empire Tycoon"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Built from scratch with unique management mechanics</li>
-              <li>Added toilets, pickups (car & in-person), tables</li>
-              <li>Staff management, player stats & upgrades</li>
-              <li>Different AI behaviours for immersion</li>
-              <li>Monetization: In-app purchases</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mt.donut.please.idle.tycoon.games">View on Play Store</a></div>
-          </div></article>
-
-          <article class="card"><div class="meta">
-            <div class="title">Scary Halen Naughty Kid Game</div>
-            <div class="gallery" data-folder="assets/img/Scary Halen Naughty Kid Game"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Built from scratch with immersive cutscenes (Unity Timeline + Cinemachine)</li>
-              <li>Daily Rewards, Spin Wheel, Ads</li>
-              <li>Power-ups: Hint, 2x Speed, Invisible, Shape-Shift</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://apkpure.com/scary-halen-naughty-kid-game/com.pw.scaryhalen.babysitter.naughtyboy">View on APKPure</a></div>
-          </div></article>
-
-          <article class="card"><div class="meta">
-            <div class="title">Color Sort - Multiplayer PvP</div>
-            <div class="gallery" data-folder="assets/img/Color Sort - Multiplayer PvP"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Built from scratch with multiplayer modes</li>
-              <li>AI opponents & real-player PvP</li>
-              <li>Powers: Undo, Hint, Add Glass, Tap-to-Drain</li>
-              <li>Leaderboard, Shop, VIP Subscription</li>
-              <li>Spin Wheel, Ads Integration</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://drive.google.com/file/d/1qyJOsHpTqWo77vftiG3-5P_i7KYdd4La/view?usp=sharing">Download Demo</a></div>
-          </div></article>
-
-          <article class="card"><div class="meta">
-            <div class="title">Commando Gun Shooting</div>
-            <div class="gallery" data-folder="assets/img/Commando Gun Shooting"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Enhanced overall controls</li><li>Improved AI for more realistic gameplay</li>
-              <li>Team Deathmatch (TDM) mode</li><li>Day/Night lighting system</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.fps.shooting.counterattack.commandomissiongames">View on Play Store</a></div>
-          </div></article>
-
-          <article class="card"><div class="meta">
-            <div class="title">Doctor Simulator Surgery</div>
-            <div class="gallery" data-folder="assets/img/Doctor Simulator Surgery"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Fixed gameplay bugs for stability</li>
-              <li>Integrated Ads for monetization</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.dino.hunting.dinosaur.hunt.best.sniper.shooting.games">View on Play Store</a></div>
-          </div></article>
-
-          <article class="card"><div class="meta">
-            <div class="title">Zombie Shooter</div>
-            <div class="gallery" data-folder="assets/img/Zombie Shooter"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Enhanced AI for smarter enemy behaviors</li>
-              <li>Integrated Ads for monetization</li>
-              <li>Fixed overall gameplay bugs for smoother experience</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.fps.zombie.shootinggames.survivalgames.gungames">View on Play Store</a></div>
-          </div></article>
-
-          <article class="card"><div class="meta">
-            <div class="title">Construction Crush</div>
-            <div class="gallery" data-folder="assets/img/Construction Crush"><div class="video">Video</div></div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              <li>Built from scratch with complete UI/UX design</li>
-              <li>Level design: 100+ levels with varied tiles (slime, cemented, etc.)</li>
-              <li>Power-ups: Break a tile, multiple boosters</li>
-            </ul>
-            <div style="margin-top:10px"><a class="btn" href="https://apkpure.com/construction-crush/com.RSS.ConstructionCrush">View on APKPure</a></div>
-          </div></article>
-
+          <!-- More project cards can follow with same structure -->
         </section>
       </div>
 
       <aside style="width:100%;max-width:320px">
         <div class="card" style="position:sticky;top:24px">
           <h3>Contact</h3>
-          <div style="margin-top:8px"><div style="font-size:13px;color:var(--muted)">Email</div><div id="email">ghulam.mustafa.rao.dev@gmail.com</div></div>
-          <div style="margin-top:8px"><div style="font-size:13px;color:var(--muted)">Phone</div><div id="phone">+92 320 9343671</div></div>
-          <div style="margin-top:8px"><div style="font-size:13px;color:var(--muted)">Location</div><div id="location">Islamabad, Pakistan</div></div>
-          <hr style="margin:12px 0;border:none;border-top:1px solid #eef2f6" />
-          <h4 style="margin:0 0 8px">Quick Links</h4>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <a class="btn" href="https://github.com/Ghulam-Mustafa-Rao">GitHub</a>
-            <a class="btn" href="https://www.linkedin.com/in/ghulammustafarao/">LinkedIn</a>
-          </div>
+          <p><strong>Email:</strong> ghulam.mustafa.rao.dev@gmail.com</p>
+          <p><strong>Phone:</strong> +92 320 9343671</p>
+          <p><strong>Location:</strong> Islamabad, Pakistan</p>
+          <hr />
+          <h4>Quick Links</h4>
+          <a class="btn" href="https://github.com/Ghulam-Mustafa-Rao">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/ghulammustafarao/">LinkedIn</a>
         </div>
       </aside>
     </section>
 
-    <script>
-      document.querySelectorAll(".gallery").forEach(gallery => {
+    <footer>
+      Built with ❤️ by Ghulam Mustafa Rao • <span id="year"></span>
+    </footer>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox"><img src="" alt="preview" /></div>
+
+  <script>
+    async function loadProjects() {
+    try {
+      const res = await fetch("GamesData.json"); // your JSON file
+      const projects = await res.json();
+      const container = document.querySelector(".projects"); // section container
+
+      // Clear placeholder content (if any)
+      container.innerHTML = `
+        <h2>Selected Projects</h2>
+        <div id="projects-container"></div>
+      `;
+
+      const projectsContainer = container.querySelector("#projects-container");
+
+      projects.forEach(proj => {
+        const article = document.createElement("article");
+        article.className = "card";
+
+        // Convert description string into <li> items
+        const descItems = proj.Description.split(";")
+          .map(d => `<li>${d.trim()}</li>`)
+          .join("");
+
+        article.innerHTML = `
+          <div class="meta">
+            <div class="title">${proj.Title}</div>
+            <div class="gallery" data-folder="${proj.Folder}">
+              <div class="screenshot">
+                <img src="${proj.Folder}/0.jpeg" alt="${proj.Title} Screenshot" loading="lazy" />
+              </div>
+              <div class="video">Video</div>
+            </div>
+            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+              ${descItems}
+            </ul>
+            <div style="margin-top:10px">
+              <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">
+                ${proj.ButtonText || "View Project"}
+              </a>
+            </div>
+          </div>
+        `;
+
+        projectsContainer.appendChild(article);
+      });
+
+    } catch (err) {
+      console.error("Error loading GamesData.json:", err);
+    }
+    }
+
+    loadProjects();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Load Data from folder
+    document.querySelectorAll(".gallery").forEach(gallery => {
         const folder = gallery.dataset.folder;
         if (!folder) return;
 
@@ -223,6 +226,7 @@
         function loadNext() {
           const img = new Image();
           img.src = `${folder}/${i}.jpeg`;
+          img.loading = "lazy"
 
           img.onload = () => {
             const div = document.createElement("div");
@@ -247,15 +251,17 @@
 
         loadNext();
       });
-    </script>
 
-    <footer>
-      Built with ❤️ by Ghulam Mustafa Rao • <span id="year"></span>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Lightbox script
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll(".screenshot img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+    lightbox.addEventListener("click", () => lightbox.style.display = "none");
   </script>
 </body>
 </html>

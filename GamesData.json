@@ -1,0 +1,58 @@
+[
+  {
+    "Title": "FPS Shooting Game",
+    "Folder": "assets/img/FPS Shooting Game",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield",
+    "ButtonText": "View on Play Store",
+    "Description": "Enhanced controls & AI; New Machine Gun Mode & TDM; Day/Night Lighting & Shooting Range; In-App Purchases, Ads, Profiler Optimization; Reduced ANRs"
+  },
+  {
+    "Title": "Donut Empire Tycoon",
+    "Folder": "assets/img/Donut Empire Tycoon",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.mt.donut.please.idle.tycoon.games",
+    "ButtonText": "View on Play Store",
+    "Description": "Built from scratch with unique management mechanics; Added toilets, pickups (car & in-person), tables; Staff management, player stats & upgrades; Different AI behaviours for immersion; Monetization: In-app purchases"
+  },
+  {
+    "Title": "Scary Halen Naughty Kid Game",
+    "Folder": "assets/img/Scary Halen Naughty Kid Game",
+    "StoreLink": "https://apkpure.com/scary-halen-naughty-kid-game/com.pw.scaryhalen.babysitter.naughtyboy",
+    "ButtonText": "View on APKPure",
+    "Description": "Built from scratch with immersive cutscenes (Unity Timeline + Cinemachine); Daily Rewards, Spin Wheel, Ads; Power-ups: Hint, 2x Speed, Invisible, Shape-Shift"
+  },
+  {
+    "Title": "Color Sort - Multiplayer PvP",
+    "Folder": "assets/img/Color Sort - Multiplayer PvP",
+    "StoreLink": "https://drive.google.com/file/d/1qyJOsHpTqWo77vftiG3-5P_i7KYdd4La/view?usp=sharing",
+    "ButtonText": "Download Demo",
+    "Description": "Built from scratch with multiplayer modes; AI opponents & real-player PvP; Powers: Undo, Hint, Add Glass, Tap-to-Drain; Leaderboard, Shop, VIP Subscription; Spin Wheel, Ads Integration"
+  },
+  {
+    "Title": "Commando Gun Shooting",
+    "Folder": "assets/img/Commando Gun Shooting",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.fps.shooting.counterattack.commandomissiongames",
+    "ButtonText": "View on Play Store",
+    "Description": "Enhanced overall controls; Improved AI for more realistic gameplay; Team Deathmatch (TDM) mode; Day/Night lighting system"
+  },
+  {
+    "Title": "Doctor Simulator Surgery",
+    "Folder": "assets/img/Doctor Simulator Surgery",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.dino.hunting.dinosaur.hunt.best.sniper.shooting.games",
+    "ButtonText": "View on Play Store",
+    "Description": "Fixed gameplay bugs for stability; Integrated Ads for monetization"
+  },
+  {
+    "Title": "Zombie Shooter",
+    "Folder": "assets/img/Zombie Shooter",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.fps.zombie.shootinggames.survivalgames.gungames",
+    "ButtonText": "View on Play Store",
+    "Description": "Enhanced AI for smarter enemy behaviors; Integrated Ads for monetization; Fixed overall gameplay bugs for smoother experience"
+  },
+  {
+    "Title": "Construction Crush",
+    "Folder": "assets/img/Construction Crush",
+    "StoreLink": "https://apkpure.com/construction-crush/com.RSS.ConstructionCrush",
+    "ButtonText": "View on APKPure",
+    "Description": "Built from scratch with complete UI/UX design; Level design: 100+ levels with varied tiles (slime, cemented, etc.); Power-ups: Break a tile, multiple boosters"
+  }
+]
