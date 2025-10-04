@@ -1,3 +1,4 @@
+<img src="${proj.Folder}/0.jpeg" alt="${proj.Title} Screenshot" loading="lazy" />
 <body>
   <div class="container">
     <header>

@@ -190,8 +190,7 @@
           <div class="meta">
             <div class="title">${proj.Title}</div>
             <div class="gallery" data-folder="${proj.Folder}">
-              <div class="screenshot">
-                <img src="${proj.Folder}/0.jpeg" alt="${proj.Title} Screenshot" loading="lazy" />
+              <div class="screenshot">                
               </div>
               <div class="video">Video</div>
             </div>
@@ -209,16 +208,7 @@
         projectsContainer.appendChild(article);
       });
 
-    } catch (err) {
-      console.error("Error loading GamesData.json:", err);
-    }
-    }
-
-    loadProjects();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Load Data from folder
-    document.querySelectorAll(".gallery").forEach(gallery => {
+      document.querySelectorAll(".gallery").forEach(gallery => {
         const folder = gallery.dataset.folder;
         if (!folder) return;
 
@@ -251,6 +241,17 @@
 
         loadNext();
       });
+
+    } catch (err) {
+      console.error("Error loading GamesData.json:", err);
+    }
+    }
+
+    loadProjects();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Load Data from folder
+    
 
     // Lightbox script
     const lightbox = document.getElementById("lightbox");
