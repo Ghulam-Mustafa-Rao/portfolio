@@ -6,17 +6,10 @@
   <title>Ghulam Mustafa Rao — Game & Dev Portfolio</title>
   <meta name="description" content="Portfolio — Unity Game Developer, projects, screenshots, videos, Play Store links" />
 
-  <!-- Favicon -->
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ghulam Mustafa Rao — Game & Dev Portfolio" />
-  <meta property="og:description" content="Unity Game Developer specializing in Multiplayer & Mobile Games." />
-  <meta property="og:image" content="assets/profile.jpg" />
-  <meta property="og:type" content="website" />
-
   <style>
-    :root{
+    :root {
       --bg:#ffffff;
       --muted:#6b7280;
       --accent:#0f172a;
@@ -56,22 +49,78 @@
 
     .projects{margin-top:40px}
     .projects h2{margin-bottom:16px}
-    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef2f6;margin-bottom:20px}
+    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef2f6;margin-bottom:20px;position:relative}
     .meta{margin-top:10px}
     .meta .title{font-weight:700;font-size:20px;margin-bottom:8px}
 
-    .gallery{margin-top:12px;max-width:100%;overflow-x:auto;display:flex;flex-wrap:nowrap;gap:10px;padding-bottom:10px}
+    .gallery-wrapper {
+      position: relative;
+      margin-top:12px;
+    }
+    .gallery {
+      max-width:100%;
+      overflow-x:auto;
+      overflow-y:hidden;
+      display:flex;
+      flex-wrap:nowrap;
+      gap:10px;
+      padding-bottom:10px;
+      scrollbar-width:thin;
+      scroll-behavior: smooth;
+    }
     .gallery::-webkit-scrollbar{height:8px}
     .gallery::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px}
 
-    .screenshot{flex:0 0 auto;height:220px;border-radius:8px;background:#fff;border:1px solid #e6edf3;overflow:hidden;cursor:pointer}
-    .screenshot img{height:100%;width:auto;object-fit:contain;display:block}
+    .screenshot {
+      flex:0 0 auto;
+      width:160px;
+      height:220px;
+      border-radius:8px;
+      background:#fff;
+      border:1px solid #e6edf3;
+      overflow:hidden;
+      cursor:pointer;
+    }
+    .screenshot img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
-    .video{flex:0 0 auto;height:220px;width:320px;border-radius:8px;background:#000;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
+    .video {
+      flex:0 0 auto;
+      height:220px;
+      width:320px;
+      border-radius:8px;
+      background:#000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:13px;
+    }
+
+    /* Scroll buttons */
+    .scroll-btn {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.5);
+      color:#fff;
+      border:none;
+      border-radius:50%;
+      width:32px;
+      height:32px;
+      cursor:pointer;
+      z-index:2;
+      display:none; /* hidden by default */
+    }
+    .scroll-btn.left { left:-10px; }
+    .scroll-btn.right { right:-10px; }
 
     footer{margin:48px 0 80px;text-align:center;color:var(--muted);font-size:14px}
 
-    /* Lightbox */
     .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;z-index:9999}
     .lightbox img{max-height:90%;max-width:90%;border-radius:12px}
 
@@ -104,39 +153,14 @@
       <div>
         <div class="about">
           <h2>About</h2>
-          <p>Hi, I’m <strong>Ghulam Mustafa Rao</strong>, an accomplished Unity Game Developer with 3+ years of coding experience in C# and Unity. I’ve built FPS, simulation, puzzle, PC, and blockchain games with advanced AI, optimized performance, and engaging mechanics.</p>
-          <p>Skilled in monetization (Google Ads, AppLovin, IronSource), analytics (Firebase, Appsflyer, Game Analytics), and multiplayer systems (Photon, Mirror, Fusion 2).</p>
+          <p>Hi, I’m <strong>Ghulam Mustafa Rao</strong>, an accomplished Unity Game Developer with 3+ years of coding experience in C# and Unity...</p>
           <div class="cv-actions">
             <a class="btn btn-primary" href="Ghulam_Mustafa_Rao_Games.pdf" download>Download CV</a>
-          </div>
-          <h3 style="margin-top:14px">Skills</h3>
-          <div class="tags">
-            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Photon / Mirror / Fusion 2</span>
-            <span class="tag">Firebase</span><span class="tag">Game AI</span><span class="tag">Ads & Monetization</span>
-            <span class="tag">Git / Plastic SCM</span><span class="tag">Timeline & Cinemachine</span>
           </div>
         </div>
 
         <section class="projects">
           <h2>Selected Projects</h2>
-          
-          <!-- <article class="card">
-            <div class="meta">
-              <div class="title">FPS Shooting Game</div>
-              <div class="gallery" data-folder="assets/img/FPS Shooting Game">
-                <div class="screenshot"></div>
-                <div class="video">Video</div>
-              </div>
-              <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-                <li>Enhanced controls & AI</li>
-                <li>Day/Night Lighting & Shooting Range</li>
-                <li>In-App Purchases, Ads, Profiler Optimization</li>
-              </ul>
-              <div style="margin-top:10px"><a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield">View on Play Store</a></div>
-            </div>
-          </article> -->
-
-          <!-- More project cards can follow with same structure -->
         </section>
       </div>
 
@@ -146,10 +170,6 @@
           <p><strong>Email:</strong> ghulam.mustafa.rao.dev@gmail.com</p>
           <p><strong>Phone:</strong> +92 320 9343671</p>
           <p><strong>Location:</strong> Islamabad, Pakistan</p>
-          <hr />
-          <h4>Quick Links</h4>
-          <a class="btn" href="https://github.com/Ghulam-Mustafa-Rao">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/ghulammustafarao/">LinkedIn</a>
         </div>
       </aside>
     </section>
@@ -159,7 +179,6 @@
     </footer>
   </div>
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox"><img src="" alt="preview" /></div>
 
 <script>
@@ -169,34 +188,28 @@ async function loadProjects() {
     const projects = await res.json();
     const container = document.querySelector(".projects");
 
-    container.innerHTML = `
-      <h2>Selected Projects</h2>
-      <div id="projects-container"></div>
-    `;
-
+    container.innerHTML = `<h2>Selected Projects</h2><div id="projects-container"></div>`;
     const projectsContainer = container.querySelector("#projects-container");
 
     projects.forEach(proj => {
       const article = document.createElement("article");
       article.className = "card";
 
-      const descItems = proj.Description.split(";")
-        .map(d => `<li>${d.trim()}</li>`)
-        .join("");
+      const descItems = proj.Description.split(";").map(d => `<li>${d.trim()}</li>`).join("");
 
       article.innerHTML = `
         <div class="meta">
           <div class="title">${proj.Title}</div>
-          <div class="gallery" data-folder="${proj.Folder}">
-            <div class="video">Video</div>
+          <div class="gallery-wrapper">
+            <button class="scroll-btn left">←</button>
+            <div class="gallery" data-folder="${proj.Folder}">
+              <div class="video">Video</div>
+            </div>
+            <button class="scroll-btn right">→</button>
           </div>
-          <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-            ${descItems}
-          </ul>
+          <ul style="font-size:13px;color:var(--muted);margin-top:6px">${descItems}</ul>
           <div style="margin-top:10px">
-            <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">
-              ${proj.ButtonText || "View Project"}
-            </a>
+            <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">${proj.ButtonText || "View Project"}</a>
           </div>
         </div>
       `;
@@ -204,83 +217,53 @@ async function loadProjects() {
       projectsContainer.appendChild(article);
     });
 
-    // Now load images for each gallery
     document.querySelectorAll(".gallery").forEach(gallery => {
-  const folder = gallery.dataset.folder;
-  if (!folder) return;
+      const folder = gallery.dataset.folder;
+      if (!folder) return;
 
-  let i = 0;
-  function loadNext() {
-    const imgPath = `${folder}/${i}.jpeg`;
-    console.log("Trying:", imgPath);
+      // load screenshots
+      let i = 0;
+      function loadNext() {
+        const imgPath = `${folder}/${i}.jpeg`;
+        const img = new Image();
+        img.src = imgPath;
+        img.onload = () => {
+          const div = document.createElement("div");
+          div.className = "screenshot";
+          div.appendChild(img);
+          gallery.insertBefore(div, gallery.querySelector(".video"));
+          img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+          });
+          i++; loadNext();
+        };
+        img.onerror = () => {};
+      }
+      loadNext();
 
-    const img = new Image();
-    img.src = imgPath;
-    //img.loading = "lazy";
+      // scroll buttons
+      const wrapper = gallery.parentElement;
+      const btnLeft = wrapper.querySelector(".scroll-btn.left");
+      const btnRight = wrapper.querySelector(".scroll-btn.right");
 
-    img.onload = () => {
-      console.log("Loaded:", imgPath);
+      function updateButtons() {
+        const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+        btnLeft.style.display = gallery.scrollLeft > 0 ? "block" : "none";
+        btnRight.style.display = gallery.scrollLeft < maxScroll ? "block" : "none";
+      }
 
-      const div = document.createElement("div");
-      div.className = "screenshot";
-      div.appendChild(img);
-
-      const videoBlock = gallery.querySelector(".video");
-      gallery.insertBefore(div, videoBlock);
-
-      // Lightbox
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
+      btnLeft.addEventListener("click", () => {
+        gallery.scrollBy({left:-200,behavior:"smooth"});
+      });
+      btnRight.addEventListener("click", () => {
+        gallery.scrollBy({left:200,behavior:"smooth"});
       });
 
-      i++;
-      loadNext(); // try next index
-    };
-
-    img.onerror = () => {
-      console.warn("Not found, stopping at:", imgPath);
-    };
-  }
-
-  loadNext();
-});
-
-    // document.querySelectorAll(".gallery").forEach(gallery => {
-    //   const folder = gallery.dataset.folder;
-    //   if (!folder) return;
-
-    //   let i = 0;
-    //   function loadNext() {
-    //     const img = new Image();
-    //     img.src = `${folder}/${i}.jpeg`;
-    //     img.loading = "lazy";
-
-    //     img.onload = () => {
-    //       const div = document.createElement("div");
-    //       div.className = "screenshot";
-    //       div.appendChild(img);
-
-    //       const videoBlock = gallery.querySelector(".video");
-    //       gallery.insertBefore(div, videoBlock);
-
-    //       // Lightbox binding
-    //       img.addEventListener("click", () => {
-    //         lightbox.style.display = "flex";
-    //         lightboxImg.src = img.src;
-    //       });
-
-    //       i++;
-    //       loadNext(); // keep going until error
-    //     };
-
-    //     img.onerror = () => {
-    //       console.log(`Finished loading images from ${folder}`);
-    //     };
-    //   }
-
-    //   loadNext();
-    // });
+      gallery.addEventListener("scroll", updateButtons);
+      window.addEventListener("resize", updateButtons);
+      updateButtons();
+    });
 
   } catch (err) {
     console.error("Error loading GamesData.json:", err);
@@ -289,14 +272,12 @@ async function loadProjects() {
 
 loadProjects();
 
-// Lightbox setup
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = lightbox.querySelector("img");
 lightbox.addEventListener("click", () => lightbox.style.display = "none");
 
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 
 </body>
 </html>
