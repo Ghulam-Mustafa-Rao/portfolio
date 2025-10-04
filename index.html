@@ -162,107 +162,102 @@
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox"><img src="" alt="preview" /></div>
 
-  <script>
-    async function loadProjects() {
-    try {
-      const res = await fetch("GamesData.json"); // your JSON file
-      const projects = await res.json();
-      const container = document.querySelector(".projects"); // section container
+<script>
+async function loadProjects() {
+  try {
+    const res = await fetch("GamesData.json"); // your JSON file
+    const projects = await res.json();
+    const container = document.querySelector(".projects"); // section container
 
-      // Clear placeholder content (if any)
-      container.innerHTML = `
-        <h2>Selected Projects</h2>
-        <div id="projects-container"></div>
+    // Clear placeholder content (if any)
+    container.innerHTML = `
+      <h2>Selected Projects</h2>
+      <div id="projects-container"></div>
+    `;
+
+    const projectsContainer = container.querySelector("#projects-container");
+
+    projects.forEach(proj => {
+      const article = document.createElement("article");
+      article.className = "card";
+
+      // Convert description string into <li> items
+      const descItems = proj.Description.split(";")
+        .map(d => `<li>${d.trim()}</li>`)
+        .join("");
+
+      article.innerHTML = `
+        <div class="meta">
+          <div class="title">${proj.Title}</div>
+          <div class="gallery" data-folder="${proj.Folder}">
+            <!-- images will be inserted here -->
+            <div class="video">Video</div>
+          </div>
+          <ul style="font-size:13px;color:var(--muted);margin-top:6px">
+            ${descItems}
+          </ul>
+          <div style="margin-top:10px">
+            <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">
+              ${proj.ButtonText || "View Project"}
+            </a>
+          </div>
+        </div>
       `;
 
-      const projectsContainer = container.querySelector("#projects-container");
-
-      projects.forEach(proj => {
-        const article = document.createElement("article");
-        article.className = "card";
-
-        // Convert description string into <li> items
-        const descItems = proj.Description.split(";")
-          .map(d => `<li>${d.trim()}</li>`)
-          .join("");
-
-        article.innerHTML = `
-          <div class="meta">
-            <div class="title">${proj.Title}</div>
-            <div class="gallery" data-folder="${proj.Folder}">
-              <div class="screenshot">                
-              </div>
-              <div class="video">Video</div>
-            </div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:6px">
-              ${descItems}
-            </ul>
-            <div style="margin-top:10px">
-              <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">
-                ${proj.ButtonText || "View Project"}
-              </a>
-            </div>
-          </div>
-        `;
-
-        projectsContainer.appendChild(article);
-      });
-
-      document.querySelectorAll(".gallery").forEach(gallery => {
-        const folder = gallery.dataset.folder;
-        if (!folder) return;
-
-        let i = 0;
-        function loadNext() {
-          const img = new Image();
-          img.src = `${folder}/${i}.jpeg`;
-          img.loading = "lazy"
-
-          img.onload = () => {
-            const div = document.createElement("div");
-            div.className = "screenshot";
-            div.appendChild(img);
-
-            const videoBlock = gallery.querySelector(".video");
-            if (videoBlock) {
-              gallery.insertBefore(div, videoBlock);
-            } else {
-              gallery.appendChild(div);
-            }
-
-            i++;
-            loadNext();
-          };
-
-          img.onerror = () => {
-            console.log(`Finished loading images from ${folder}`);
-          };
-        }
-
-        loadNext();
-      });
-
-    } catch (err) {
-      console.error("Error loading GamesData.json:", err);
-    }
-    }
-
-    loadProjects();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Load Data from folder
-    
-
-    // Lightbox script
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = lightbox.querySelector("img");
-    document.querySelectorAll(".screenshot img").forEach(img => {
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-      });
+      projectsContainer.appendChild(article);
     });
-    lightbox.addEventListener("click", () => lightbox.style.display = "none");
-  </script>
+
+    // Load screenshots dynamically
+    document.querySelectorAll(".gallery").forEach(gallery => {
+      const folder = gallery.dataset.folder;
+      if (!folder) return;
+
+      let i = 0;
+      function loadNext() {
+        const img = new Image();
+        img.src = `${folder}/${i}.jpeg`;
+        img.loading = "lazy";
+
+        img.onload = () => {
+          const div = document.createElement("div");
+          div.className = "screenshot";
+          div.appendChild(img);
+
+          const videoBlock = gallery.querySelector(".video");
+          gallery.insertBefore(div, videoBlock);
+
+          // ✅ add click handler for lightbox right here
+          img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+          });
+
+          i++;
+          loadNext();
+        };
+
+        img.onerror = () => {
+          console.log(`Finished loading images from ${folder}`);
+        };
+      }
+
+      loadNext();
+    });
+
+  } catch (err) {
+    console.error("Error loading GamesData.json:", err);
+  }
+}
+
+loadProjects();
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Lightbox script (global)
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+lightbox.addEventListener("click", () => lightbox.style.display = "none");
+</script>
+
 </body>
 </html>
