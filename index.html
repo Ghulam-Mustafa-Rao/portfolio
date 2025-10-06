@@ -223,12 +223,12 @@ async function loadProjects(){
           // Detect orientation dynamically
           if (img.naturalWidth > img.naturalHeight) {
             // Landscape
-            div.style.width = '180px';
+            div.style.width = '280px';
             div.style.height = '140px';
           } else {
             // Portrait
-            div.style.width = '140px';
-            div.style.height = '180px';
+            div.style.width = '200px';
+            div.style.height = '400px';
           }
         
           gallery.insertBefore(div, gallery.querySelector('.video'));
