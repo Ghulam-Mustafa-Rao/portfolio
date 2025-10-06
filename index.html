@@ -54,8 +54,28 @@
     .gallery::-webkit-scrollbar{height:8px}
     .gallery::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px}
 
-    .screenshot { flex:0 0 auto; width:160px; height:180px; border-radius:8px; overflow:hidden; background:#fff; border:1px solid #e6edf3 }
-    .screenshot img { width:100%; height:100%; object-fit:cover; display:block }
+    /* .screenshot { flex:0 0 auto; width:160px; height:180px; border-radius:8px; overflow:hidden; background:#fff; border:1px solid #e6edf3 } */
+    .screenshot {
+      flex:0 0 auto;
+      width:160px;
+      height:180px;
+      border-radius:8px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid #e6edf3;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* .screenshot img { width:100%; height:100%; object-fit:cover; display:block } */
+    .screenshot img {
+      width:100%;
+      height:100%;
+      object-fit:contain;     /* Keeps aspect ratio without cropping */
+      display:block;
+      background-color:#fff;  /* Optional: fills empty space for vertical images */
+    }
 
     .video { flex:0 0 auto; height:180px; width:280px; border-radius:8px; background:#000; color:#fff; display:flex;justify-content:center;align-items:center }
 
