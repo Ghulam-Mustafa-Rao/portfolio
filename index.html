@@ -38,15 +38,17 @@
       flex-wrap: wrap;
       overflow: hidden;           /* <-- clip overflow */
       padding: 0 32px;           /* room for buttons inside wrapper */
+      max-width: 90%
     }
     .gallery {
       display:flex;
-      flex-wrap: wrap;
       gap:10px;
       overflow-x:auto;
       overflow-y:hidden;
       padding:10px;
       scroll-behavior:smooth;
+      width: 100%;
+      max-width: 100vw;
       -webkit-overflow-scrolling:touch;
     }
     .gallery::-webkit-scrollbar{height:8px}
