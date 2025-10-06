@@ -308,7 +308,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
     p.lead{margin:8px 0 0;color:var(--muted)}
     .btn{padding:10px 14px;border-radius:8px;border:1px solid #e6e9ef;background:#fff;cursor:pointer;text-decoration:none;color:inherit;display:inline-block;text-align:center}
     .btn-primary{background:var(--primary);color:#fff;border:none}
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:28px;align-items:start}
+    .hero{display:grid;grid-template-columns:1fr 0px;gap:24px;margin-top:28px;align-items:start}
     .about{background:var(--card);padding:20px;border-radius:12px}
     .projects{margin-top:40px}
     .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef2f6;margin-bottom:20px;position:relative;overflow:hidden} /* <-- clip children */
@@ -318,6 +318,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
     .gallery-wrapper {
       position: relative;
       margin-top:12px;
+      flex-wrap: wrap;
       overflow: hidden;           /* <-- clip overflow */
       /* padding: 0 32px;           room for buttons inside wrapper */
     }
@@ -430,22 +431,6 @@ async function loadProjects(){
             <button class="scroll-btn left" aria-label="scroll left">‹</button>
             <div class="gallery" data-folder="${proj.Folder}">
               <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
-              <div class="video">Video</div>
             </div>
             <button class="scroll-btn right" aria-label="scroll right">›</button>
           </div>
@@ -498,7 +483,7 @@ async function loadProjects(){
           const div = document.createElement('div');
           div.className = 'screenshot';
           div.appendChild(img);
-          //gallery.insertBefore(div, gallery.querySelector('.video'));
+          gallery.insertBefore(div, gallery.querySelector('.video'));
 
           // lightbox on click
           img.addEventListener('click', ()=> {
