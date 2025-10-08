@@ -75,8 +75,8 @@
 
     .video {
       flex: 0 0 auto;
-      width: 280px;
-      height: 140px;
+      width: 350px;
+      height: 200px;
       border-radius: 8px;
       overflow: hidden;
       background: #000;
@@ -113,7 +113,7 @@
     @media(max-width:880px){
       .hero{grid-template-columns:1fr}
       .screenshot{height:140px;width:120px}
-      .video{height:140px;width:200px}
+      .video{height:170px;width:280px}
     }
   </style>
 </head>
@@ -256,12 +256,12 @@ async function loadProjects(){
           // Dynamically adjust size by orientation
           if (img.naturalWidth > img.naturalHeight) {
             // Landscape
-            div.style.width = '280px';
-            div.style.height = '140px';
+            div.style.width = '350px';
+            div.style.height = '200px';
           } else {
             // Portrait
             div.style.width = '200px';
-            div.style.height = '400px';
+            div.style.height = '350px';
           }
         
           // ✅ Insert image after all videos (or just append if no videos)
