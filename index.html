@@ -73,7 +73,24 @@
     }
 
 
-    .video { flex:0 0 auto; height:180px; width:280px; border-radius:8px; background:#000; color:#fff; display:flex;justify-content:center;align-items:center }
+    .video {
+      flex: 0 0 auto;
+      width: 200px;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
 
     /* scroll buttons (inside wrapper) */
     .scroll-btn {
@@ -159,20 +176,35 @@ async function loadProjects(){
       article.className = "card";
 
       const descItems = (proj.Description||"").split(";").map(s=>`<li>${s.trim()}</li>`).join("");
-
+      
       article.innerHTML = `
         <div class="meta">
           <div class="title">${proj.Title}</div>
           <div class="gallery-wrapper">
             <button class="scroll-btn left" aria-label="scroll left">‹</button>
             <div class="gallery" data-folder="${proj.Folder}">
-              <div class="video">Video</div>
+              ${proj.Videos && proj.Videos.length > 0
+                ? proj.Videos.map(v =>
+                    `<div class="video">
+                      <iframe
+                        src="https://www.youtube.com/embed/${v.split("v=")[1].split("&")[0]}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                    </div>`
+                  ).join("")
+                : ""
+              }
             </div>
             <button class="scroll-btn right" aria-label="scroll right">›</button>
           </div>
           <ul style="font-size:13px;color:var(--muted);margin-top:8px">${descItems}</ul>
-          <div style="margin-top:10px">
-            <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank" rel="noreferrer">${proj.ButtonText||"View Project"}</a>
+          <div style="margin-top:10px">            
+              ${proj.StoreLink && proj.StoreLink.trim() !== ""
+                ? `<a class="btn btn-primary" href="${proj.StoreLink}" target="_blank" rel="noreferrer">${proj.ButtonText || "View Project"}</a>`
+                : ""
+          }
           </div>
         </div>
       `;
@@ -210,17 +242,18 @@ async function loadProjects(){
       window.addEventListener('resize', updateButtonsVisibility);
 
       // load images named 0.jpeg, 1.jpeg, 2.jpeg ...
-      let i = 0;
-      function tryLoad(){
+      let i = 0;    
+      function tryLoad() {
         const path = `${folder}/${i}.jpeg`;
         const img = new Image();
         img.src = path;
+
         img.onload = () => {
           const div = document.createElement('div');
           div.className = 'screenshot';
           div.appendChild(img);
-
-          // Detect orientation dynamically
+        
+          // Dynamically adjust size by orientation
           if (img.naturalWidth > img.naturalHeight) {
             // Landscape
             div.style.width = '280px';
@@ -231,10 +264,16 @@ async function loadProjects(){
             div.style.height = '400px';
           }
         
-          gallery.insertBefore(div, gallery.querySelector('.video'));
+          // ✅ Insert image after all videos (or just append if no videos)
+          const lastVideo = gallery.querySelector('.video:last-of-type');
+          if (lastVideo) {
+            gallery.insertBefore(div, lastVideo.nextSibling);
+          } else {
+            gallery.appendChild(div);
+          }
         
-          // lightbox on click
-          img.addEventListener('click', ()=> {
+          // Lightbox click
+          img.addEventListener('click', () => {
             lightbox.style.display = 'flex';
             lightboxImg.src = img.src;
           });
@@ -242,34 +281,16 @@ async function loadProjects(){
           setTimeout(updateButtonsVisibility, 40);
         
           i++;
-          tryLoad(); // try next
+          tryLoad(); // Load next image
         };
-
-        // img.onload = () => {
-        //   const div = document.createElement('div');
-        //   div.className = 'screenshot';
-        //   div.appendChild(img);
-        //   gallery.insertBefore(div, gallery.querySelector('.video'));
-
-        //   // lightbox on click
-        //   img.addEventListener('click', ()=> {
-        //     lightbox.style.display = 'flex';
-        //     lightboxImg.src = img.src;
-        //   });
-
-        //   // after adding each image recalc buttons (so they show when enough images exist)
-        //   setTimeout(updateButtonsVisibility, 40);
-
-        //   i++;
-        //   tryLoad(); // try next index
-        // };
+      
         img.onerror = () => {
-          // stop when index not found
-          setTimeout(updateButtonsVisibility, 40); // ensure buttons updated if 0 images exist
+          // Stop loading when no more images found
+          setTimeout(updateButtonsVisibility, 40);
         };
       }
-      tryLoad();
-    });
+       tryLoad();
+  });
 
     // lightbox click to close
     lightbox.addEventListener('click', ()=> lightbox.style.display = 'none');
