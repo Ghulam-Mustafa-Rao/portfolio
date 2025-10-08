@@ -1,0 +1,99 @@
+[
+  {
+    "Title": "Metaclash Undead",
+    "Folder": "assets/img/Metaclash Undead",
+    "StoreLink": "",
+    "ButtonText": "",
+    "Description": "Built for PC; Humans vs Zombies Multiplayer game; Headless server; Mirror is used for multiplayer; Invector is used for charaters and AI; Profiler Optimization,Memeory optimization",
+    "Videos": [
+    "https://www.youtube.com/watch?v=bxShKkCGCeU",
+    "https://www.youtube.com/watch?v=dEcQRPlqZwU",
+    "https://www.youtube.com/watch?v=xwOLDVZaToQ"
+  ]
+  },
+  {
+    "Title": "Donut Empire Tycoon",
+    "Folder": "assets/img/Donut Empire Tycoon",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.mt.donut.please.idle.tycoon.games",
+    "ButtonText": "View on Play Store",
+    "Description": "Built from scratch with unique management mechanics; Added toilets, pickups (car & in-person), tables; Staff management, player stats & upgrades; Different AI behaviours for immersion; Monetization: In-app purchases",
+    "Videos": [
+  ]
+  },
+  {
+    "Title": "Scary Halen Naughty Kid Game",
+    "Folder": "assets/img/Scary Halen Naughty Kid Game",
+    "StoreLink": "https://apkpure.com/scary-halen-naughty-kid-game/com.pw.scaryhalen.babysitter.naughtyboy",
+    "ButtonText": "View on APKPure",
+    "Description": "Built from scratch with immersive cutscenes (Unity Timeline + Cinemachine); Daily Rewards, Spin Wheel, Ads; Power-ups: Hint, 2x Speed, Invisible, Shape-Shift",
+    "Videos": [
+  ]
+  },
+  {
+    "Title": "Color Sort - Multiplayer PvP",
+    "Folder": "assets/img/Color Sort - Multiplayer PvP",
+    "StoreLink": "https://drive.google.com/file/d/1qyJOsHpTqWo77vftiG3-5P_i7KYdd4La/view?usp=sharing",
+    "ButtonText": "Download Demo",
+    "Description": "Built from scratch with multiplayer modes; AI opponents & real-player PvP; Powers: Undo, Hint, Add Glass, Tap-to-Drain; Leaderboard, Shop, VIP Subscription; Spin Wheel, Ads Integration",
+    "Videos": [
+	"https://www.youtube.com/watch?v=KoqPlzk0mBM"
+  ]
+  },
+  {
+    "Title": "Ecoscape",
+    "Folder": "assets/img/Ecoscape",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.fg.ecoscape.tycoon.games.pinpull&hl=en",
+    "ButtonText": "View on APKPure",
+    "Description": "Built from scratch; Created all mechanincs and levels of tasks;",
+    "Videos": [
+	"https://www.youtube.com/watch?v=4YLOVfw9ueU",
+        "https://www.youtube.com/watch?v=pAfd9yHsgRw',
+        "https://www.youtube.com/watch?v=l6lQtLGjbS4"
+  ]
+  },
+  {
+    "Title": "FPS Shooting Game",
+    "Folder": "assets/img/FPS Shooting Game",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield",
+    "ButtonText": "View on Play Store",
+    "Description": "Enhanced controls & AI; New Machine Gun Mode & TDM; Day/Night Lighting & Shooting Range; In-App Purchases, Ads, Profiler Optimization; Reduced ANRs",
+    "Videos": [
+  ]
+  },
+  {
+    "Title": "Commando Gun Shooting",
+    "Folder": "assets/img/Commando Gun Shooting",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.fps.shooting.counterattack.commandomissiongames",
+    "ButtonText": "View on Play Store",
+    "Description": "Enhanced overall controls; Improved AI for more realistic gameplay; Team Deathmatch (TDM) mode; Day/Night lighting system",
+    "Videos": [
+  ]
+  },
+  {
+    "Title": "Doctor Simulator Surgery",
+    "Folder": "assets/img/Doctor Simulator Surgery",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.dino.hunting.dinosaur.hunt.best.sniper.shooting.games",
+    "ButtonText": "View on Play Store",
+    "Description": "Fixed gameplay bugs for stability; Integrated Ads for monetization",
+    "Videos": [
+  ]
+  },
+  {
+    "Title": "Zombie Shooter",
+    "Folder": "assets/img/Zombie Shooter",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.fps.zombie.shootinggames.survivalgames.gungames",
+    "ButtonText": "View on Play Store",
+    "Description": "Enhanced AI for smarter enemy behaviors; Integrated Ads for monetization; Fixed overall gameplay bugs for smoother experience",
+    "Videos": [
+  ]
+  },
+  {
+    "Title": "Construction Crush",
+    "Folder": "assets/img/Construction Crush",
+    "StoreLink": "https://apkpure.com/construction-crush/com.RSS.ConstructionCrush",
+    "ButtonText": "View on APKPure",
+    "Description": "Built from scratch with complete UI/UX design; Level design: 100+ levels with varied tiles (slime, cemented, etc.); Power-ups: Break a tile, multiple boosters",
+    "Videos": [
+  ]
+  }
+]
