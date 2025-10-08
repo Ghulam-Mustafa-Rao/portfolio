@@ -258,7 +258,7 @@ async function loadProjects(){
             return;
           }
         }
-        
+
         const ext = extensions[tried];
         const path = `${folder}/${i}.${ext}`; // ✅ dynamic extension
         const img = new Image();
@@ -303,7 +303,9 @@ async function loadProjects(){
       
         img.onerror = () => {
           // Stop loading when no more images found
-          setTimeout(updateButtonsVisibility, 40);
+          //setTimeout(updateButtonsVisibility, 40);
+          tried++;
+          tryNextExtension();
         };
       }
        tryLoad();
