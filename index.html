@@ -216,103 +216,196 @@ async function loadProjects(){
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = lightbox.querySelector("img");
 
-    document.querySelectorAll(".gallery").forEach(gallery => {
-      const folder = gallery.dataset.folder;
-      if(!folder) return;
+  //   document.querySelectorAll(".gallery").forEach(gallery => {
+  //     const folder = gallery.dataset.folder;
+  //     if(!folder) return;
 
-      // helper to update scroll-button visibility
-      const wrapper = gallery.parentElement;
-      const btnLeft = wrapper.querySelector(".scroll-btn.left");
-      const btnRight = wrapper.querySelector(".scroll-btn.right");
+  //     // helper to update scroll-button visibility
+  //     const wrapper = gallery.parentElement;
+  //     const btnLeft = wrapper.querySelector(".scroll-btn.left");
+  //     const btnRight = wrapper.querySelector(".scroll-btn.right");
 
-      function updateButtonsVisibility(){
-        const maxScroll = gallery.scrollWidth - gallery.clientWidth;
-        if(maxScroll <= 1){ // nothing to scroll
-          btnLeft.style.display = 'none';
-          btnRight.style.display = 'none';
-        } else {
-          btnLeft.style.display = gallery.scrollLeft > 5 ? 'block' : 'none';
-          btnRight.style.display = gallery.scrollLeft < maxScroll - 5 ? 'block' : 'none';
-        }
-      }
+  //     function updateButtonsVisibility(){
+  //       const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+  //       if(maxScroll <= 1){ // nothing to scroll
+  //         btnLeft.style.display = 'none';
+  //         btnRight.style.display = 'none';
+  //       } else {
+  //         btnLeft.style.display = gallery.scrollLeft > 5 ? 'block' : 'none';
+  //         btnRight.style.display = gallery.scrollLeft < maxScroll - 5 ? 'block' : 'none';
+  //       }
+  //     }
 
-      // scroll actions
-      btnLeft.addEventListener('click', ()=> gallery.scrollBy({left:-240, behavior:'smooth'}));
-      btnRight.addEventListener('click', ()=> gallery.scrollBy({left:240, behavior:'smooth'}));
-      gallery.addEventListener('scroll', updateButtonsVisibility);
-      window.addEventListener('resize', updateButtonsVisibility);
+  //     // scroll actions
+  //     btnLeft.addEventListener('click', ()=> gallery.scrollBy({left:-240, behavior:'smooth'}));
+  //     btnRight.addEventListener('click', ()=> gallery.scrollBy({left:240, behavior:'smooth'}));
+  //     gallery.addEventListener('scroll', updateButtonsVisibility);
+  //     window.addEventListener('resize', updateButtonsVisibility);
 
-      // load images named 0.jpeg, 1.jpeg, 2.jpeg ...
-      let i = 0;    
-      const extensions = ["jpeg", "jpg", "png", "webp"]; // allowed types
-      function tryLoad() {
-        // const path = `${folder}/${i}.jpeg`;
-        // const img = new Image();
-        // img.src = path;
-        let tried = 0; // keep track of which extension we’re testing
+  //     // load images named 0.jpeg, 1.jpeg, 2.jpeg ...
+  //     let i = 0;    
+  //     const extensions = ["jpeg", "jpg", "png", "webp"]; // allowed types
+  //     function tryLoad() {
+  //       // const path = `${folder}/${i}.jpeg`;
+  //       // const img = new Image();
+  //       // img.src = path;
+  //       let tried = 0; // keep track of which extension we’re testing
 
-        function tryNextExtension() {
-          if (tried >= extensions.length) {
-            // ❌ none of the extensions worked → stop this index
-            setTimeout(updateButtonsVisibility, 40);
-            return;
-          }
-        }
+  //       function tryNextExtension() {
+  //         if (tried >= extensions.length) {
+  //           // ❌ none of the extensions worked → stop this index
+  //           setTimeout(updateButtonsVisibility, 40);
+  //           return;
+  //         }
+  //       }
 
-        const ext = extensions[tried];
-        const path = `${folder}/${i}.${ext}`; // ✅ dynamic extension
-        const img = new Image();
-        img.src = path;
+  //       const ext = extensions[tried];
+  //       const path = `${folder}/${i}.${ext}`; // ✅ dynamic extension
+  //       const img = new Image();
+  //       img.src = path;
 
 
-        img.onload = () => {
-          const div = document.createElement('div');
-          div.className = 'screenshot';
-          div.appendChild(img);
+  //       img.onload = () => {
+  //         const div = document.createElement('div');
+  //         div.className = 'screenshot';
+  //         div.appendChild(img);
         
-          // Dynamically adjust size by orientation
-          if (img.naturalWidth > img.naturalHeight) {
-            // Landscape
-            div.style.width = '350px';
-            div.style.height = '200px';
-          } else {
-            // Portrait
-            div.style.width = '200px';
-            div.style.height = '350px';
-          }
+  //         // Dynamically adjust size by orientation
+  //         if (img.naturalWidth > img.naturalHeight) {
+  //           // Landscape
+  //           div.style.width = '350px';
+  //           div.style.height = '200px';
+  //         } else {
+  //           // Portrait
+  //           div.style.width = '200px';
+  //           div.style.height = '350px';
+  //         }
         
-          // ✅ Insert image after all videos (or just append if no videos)
-          const lastVideo = gallery.querySelector('.video:last-of-type');
-          if (lastVideo) {
-            gallery.insertBefore(div, lastVideo.nextSibling);
-          } else {
-            gallery.appendChild(div);
-          }
+  //         // ✅ Insert image after all videos (or just append if no videos)
+  //         const lastVideo = gallery.querySelector('.video:last-of-type');
+  //         if (lastVideo) {
+  //           gallery.insertBefore(div, lastVideo.nextSibling);
+  //         } else {
+  //           gallery.appendChild(div);
+  //         }
         
-          // Lightbox click
-          img.addEventListener('click', () => {
-            lightbox.style.display = 'flex';
-            lightboxImg.src = img.src;
-          });
+  //         // Lightbox click
+  //         img.addEventListener('click', () => {
+  //           lightbox.style.display = 'flex';
+  //           lightboxImg.src = img.src;
+  //         });
         
-          setTimeout(updateButtonsVisibility, 40);
+  //         setTimeout(updateButtonsVisibility, 40);
         
-          i++;
-          tryLoad(); // Load next image
-        };
+  //         i++;
+  //         tryLoad(); // Load next image
+  //       };
       
-        img.onerror = () => {
-          // Stop loading when no more images found
-          //setTimeout(updateButtonsVisibility, 40);
-          tried++;
-          tryNextExtension();
-        };
-      }
-       tryLoad();
-  });
+  //       img.onerror = () => {
+  //         // Stop loading when no more images found
+  //         //setTimeout(updateButtonsVisibility, 40);
+  //         tried++;
+  //         tryNextExtension();
+  //       };
+  //     }
+  //      tryLoad();
+  // });
 
-    // lightbox click to close
-    lightbox.addEventListener('click', ()=> lightbox.style.display = 'none');
+  //   // lightbox click to close
+  //   lightbox.addEventListener('click', ()=> lightbox.style.display = 'none');
+document.querySelectorAll(".gallery").forEach(gallery => {
+  const folder = gallery.dataset.folder;
+  if (!folder) return;
+
+  // Helper to update scroll-button visibility
+  const wrapper = gallery.parentElement;
+  const btnLeft = wrapper.querySelector(".scroll-btn.left");
+  const btnRight = wrapper.querySelector(".scroll-btn.right");
+
+  function updateButtonsVisibility() {
+    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+    if (maxScroll <= 1) { // nothing to scroll
+      btnLeft.style.display = 'none';
+      btnRight.style.display = 'none';
+    } else {
+      btnLeft.style.display = gallery.scrollLeft > 5 ? 'block' : 'none';
+      btnRight.style.display = gallery.scrollLeft < maxScroll - 5 ? 'block' : 'none';
+    }
+  }
+
+  // Scroll actions
+  btnLeft.addEventListener('click', () => gallery.scrollBy({ left: -240, behavior: 'smooth' }));
+  btnRight.addEventListener('click', () => gallery.scrollBy({ left: 240, behavior: 'smooth' }));
+  gallery.addEventListener('scroll', updateButtonsVisibility);
+  window.addEventListener('resize', updateButtonsVisibility);
+
+  // Load images dynamically: 0.jpeg / 0.jpg / 0.webp ...
+  let i = 0;
+  const extensions = ["jpeg", "jpg", "png", "webp"];
+
+  function tryLoad() {
+    let tried = 0; // reset for each image
+
+    function tryNextExtension() {
+      if (tried >= extensions.length) {
+        // ❌ No extension worked → stop this index and assume no more images
+        setTimeout(updateButtonsVisibility, 40);
+        return;
+      }
+
+      const ext = extensions[tried];
+      const path = `${folder}/${i}.${ext}`;
+      const img = new Image();
+      img.src = path;
+
+      img.onload = () => {
+        const div = document.createElement('div');
+        div.className = 'screenshot';
+        div.appendChild(img);
+
+        // Adjust size dynamically based on orientation
+        if (img.naturalWidth > img.naturalHeight) {
+          div.style.width = '350px';
+          div.style.height = '200px';
+        } else {
+          div.style.width = '200px';
+          div.style.height = '350px';
+        }
+
+        // Insert image after any videos
+        const lastVideo = gallery.querySelector('.video:last-of-type');
+        if (lastVideo) {
+          gallery.insertBefore(div, lastVideo.nextSibling);
+        } else {
+          gallery.appendChild(div);
+        }
+
+        // Lightbox click
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'flex';
+          lightboxImg.src = img.src;
+        });
+
+        setTimeout(updateButtonsVisibility, 40);
+
+        i++; // ✅ next index
+        tryLoad(); // ✅ load next image
+      };
+
+      img.onerror = () => {
+        tried++;
+        tryNextExtension(); // ✅ try next extension for same index
+      };
+    }
+
+    tryNextExtension(); // start trying extensions for current image
+  }
+
+  tryLoad();
+
+  // Lightbox click to close
+  lightbox.addEventListener('click', () => lightbox.style.display = 'none');
+});
 
   } catch(e){
     console.error("Error loading GamesData.json:", e);
