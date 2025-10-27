@@ -45,7 +45,7 @@
     "Folder": "assets/img/Ecoscape",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.fg.ecoscape.tycoon.games.pinpull&hl=en",
     "ButtonText": "View on Play Store",
-    "Description": "Built from scratch; Created all mechanincs and levels of tasks",
+    "Description": "Built from scratch; Created all mechanincs and levels of tasks [ Grass cutting,Probs and Tiles placement,Pool Cleaning,Garbage Collection ( Vacuum Cleaner ),Watering the ground, Floor Cleaning ]",
     "Videos": [
 	"https://www.youtube.com/watch?v=4YLOVfw9ueU",
         "https://www.youtube.com/watch?v=pAfd9yHsgRw",
@@ -80,11 +80,11 @@
   ]
   },
   {
-    "Title": "Zombie Shooter",
-    "Folder": "assets/img/Zombie Shooter",
-    "StoreLink": "https://play.google.com/store/apps/details?id=com.fps.zombie.shootinggames.survivalgames.gungames",
+    "Title": "Bike Stunt",
+    "Folder": "assets/img/Bike Stunt",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.bike.stunt.d.master.games",
     "ButtonText": "View on Play Store",
-    "Description": "Enhanced AI for smarter enemy behaviors; Integrated Ads for monetization; Fixed overall gameplay bugs for smoother experience",
+    "Description": "Fixed gameplay bugs for stability; Integrated Ads for monetization",
     "Videos": [
   ]
   },
