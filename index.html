@@ -261,8 +261,9 @@
               </div>
               <button class="scroll-btn right">›</button>
             </div>
-            <ul style="font-size:13px;color:var(--muted);margin-top:8px">${descItems}</ul>
-            ${proj.StoreLink ? `<a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">${proj.ButtonText || "View Project"}</a>` : ""}
+            <ul style="font-size:13px;color:var(--muted);margin-top:8px;list-style:disc;padding-left:20px;">${descItems}</ul>
+            ${proj.StoreLink?`<a class="btn btn-primary" style="margin-top:10px;display:inline-block;" href="${proj.StoreLink}" target="_blank">${proj.ButtonText||"View Project"}</a>`:""}
+
           </div>`;
         projectsContainer.appendChild(article);
       });
