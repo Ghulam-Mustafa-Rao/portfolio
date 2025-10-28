@@ -127,7 +127,13 @@
     /* .card .meta {
       text-align: center;
     } */
-    
+    /* Center button container inside cards */
+.card .btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 12px;
+}
     .card .meta .btn {
       margin-top: 12px;
       display: inline-block;
@@ -309,7 +315,12 @@
               <button class="scroll-btn right">›</button>
             </div>
             <ul>${descItems}</ul>
-            ${proj.StoreLink?`<a class="btn btn-primary" style="margin-top:10px;display:inline-block;" href="${proj.StoreLink}" target="_blank">${proj.ButtonText||"View Project"}</a>`:""}
+            ${proj.StoreLink ? `
+  <div class="btn-container">
+    <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">
+      ${proj.ButtonText || "View Project"}
+    </a>
+  </div>` : ""}            
           </div>`;
         projectsContainer.appendChild(article);
       });
