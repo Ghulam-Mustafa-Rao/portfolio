@@ -14,8 +14,8 @@
   {
     "Title": "Paint Olympus",
     "Folder": "assets/img/Paint Olympus",
-    "StoreLink": "",
-    "ButtonText": "",
+    "StoreLink": "https://cdn.vulcanforged.com/game-launcher/VulcanForgedDApps.exe",
+    "ButtonText": "Downlaod from Launcher",
     "Description": "Built for PC; Multiplayer game (Photon Fusion); APIs integration; Web3 Game; TPS; Dedicated server; Ready playerme ; Profiler Optimization,Memeory optimization",
     "Videos": [
 	"https://www.youtube.com/watch?v=BkxN7FofQPM",
