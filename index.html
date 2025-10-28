@@ -232,6 +232,70 @@
       font-size: 14px;
     }
 
+    .skills {
+  background: var(--card);
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.04);
+}
+
+.skill-category h3 {
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(77,171,247,0.6);
+}
+
+.skill-category ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.skill-category ul li {
+  position: relative;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--muted);
+  padding-left: 14px;
+}
+
+.skill-category ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #4dabf7 0%, #1a5bbf 80%);
+  box-shadow: 0 0 6px #4dabf7;
+  animation: glowPulse 2s infinite;
+}
+
+    
     @media (max-width: 880px) {
       .video { width: 300px; height: 180px; }
     }
@@ -275,7 +339,50 @@
         <p>Accomplished Unity Game Developer with 3+ years of experience building mobile and PC titles, multiplayer systems, and optimized AI-driven gameplay. Proficient in Unity, Photon, Mirror, and monetization integrations.</p>
         <a class="btn btn-primary" href="Ghulam_Mustafa_Rao_Games.pdf" download>Download CV</a>
       </div> 
-      
+
+      <section class="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>🎮 Game Development</h3>
+      <ul>
+        <li>Unity (2D & 3D)</li>
+        <li>Photon Fusion / Mirror Networking</li>
+        <li>C# Programming</li>
+        <li>Gameplay Mechanics Design</li>
+        <li>AI Systems & Pathfinding</li>
+        <li>Optimization for Mobile & PC</li>
+        <li>UI/UX Implementation</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>🧩 Tools & Integrations</h3>
+      <ul>
+        <li>Firebase, Google Play Services</li>
+        <li>AppLovin, IronSource, Unity Ads</li>
+        <li>SQLite & Cloud Save Systems</li>
+        <li>Git / GitHub / Version Control</li>
+        <li>Shader Graph & Visual Effects</li>
+        <li>Blender (Basic 3D Workflow)</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>💡 Soft Skills</h3>
+      <ul>
+        <li>Problem Solving & Debugging</li>
+        <li>Team Collaboration</li>
+        <li>Project Ownership</li>
+        <li>Adaptability & Continuous Learning</li>
+        <li>Attention to Detail</li>
+        <li>Communication & Documentation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
       <section class="projects">
         <h2>Selected Projects</h2>
       </section>
