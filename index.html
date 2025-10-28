@@ -1,245 +1,405 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio - Ghulam Mustafa Rao</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ghulam Mustafa Rao — Game & Dev Portfolio</title>
+  <meta name="description" content="Portfolio — Unity Game Developer, projects, screenshots, videos, Play Store links" />
+  <link rel="icon" href="assets/favicon.png" />
+
   <style>
-    /* ---------- GLOBAL ---------- */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
+    :root{
+      /* professional classic theme */
+      --bg: #f5f5f5;      /* page background */
+      --muted: #6c757d;   /* secondary text */
+      --accent: #212529;  /* main text color (charcoal) */
+      --card: #ffffff;    /* cards and panels */
+      --primary: #1a73e8; /* deep blue accent */
+      --border: #dee2e6;  /* subtle borders */
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: color 0.3s ease;
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; overflow-x:hidden}
+    body{
+      font-family:Inter,system-ui,Roboto,Arial;
+      background:var(--bg); color:var(--accent); line-height:1.5;
     }
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px 0}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo img{width:80px;height:80px;border-radius:50%; border: 2px solid var(--border); background: var(--card)}
+    h1{margin:0;font-size:clamp(20px,3.5vw,32px); color:var(--accent)}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card);cursor:pointer;text-decoration:none;color:inherit;display:inline-block;text-align:center}
+    .btn-primary{background:var(--primary);color:#fff;border:none}
+    .btn-primary:hover{background:#155fc0}
+    .hero{margin-top:28px;align-items:center}
+    .about{background:var(--card);padding:20px;border-radius:12px;border:1px solid var(--border)}
+    .projects{margin-top:40px}
+    .card{background:var(--card);padding:1%;border-radius:12px;border:1px solid var(--border);margin-bottom:20px;position:relative;overflow:hidden} /* <-- clip children */
+    .meta .title{font-weight:700;font-size:20px;margin-bottom:8px;color:var(--accent)}
 
-    /* ---------- NAVIGATION ---------- */
-    nav {
-      background: #fff;
-      border-bottom: 1px solid #e0e0e0;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    /* IMPORTANT: wrapper clips overflow so the page doesn't get extra width */
+    .gallery-wrapper {
+      position: relative;
+      margin-top:12px;
+      flex-wrap: wrap;
+      overflow: hidden;           /* <-- clip overflow */
+      padding: 0 2%;           /* room for buttons inside wrapper */
+      max-width: 100%
     }
+    .gallery {
+      display:flex;
+      align-items: center; /* ✅ Centers all videos and images vertically */
+      gap:10px;
+      overflow-x:auto;
+      overflow-y:hidden;
+      padding:10px;
+      scroll-behavior:smooth;
+      width: 100%;
+      max-width: 100vw;
+      -webkit-overflow-scrolling:touch;
+    }
+    .gallery::-webkit-scrollbar{height:8px}
+    .gallery::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px}
 
-    nav a {
-      color: #444;
-      font-weight: 500;
+    .screenshot {
+      flex: 0 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
       display: flex;
       align-items: center;
-      gap: 6px;
-      transition: color 0.3s ease;
+      justify-content: center;
+    }
+    .screenshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background-color: var(--card);
     }
 
-    nav a:hover {
-      color: #1a73e8;
-    }
-
-    nav svg {
-      width: 20px;
-      height: 20px;
-      color: #666;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover svg {
-      color: #1a73e8;
-    }
-
-    /* ---------- HEADER ---------- */
-    header {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: #ffffff;
-      border-bottom: 1px solid #ddd;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    header p {
-      color: #555;
-      font-size: 1.1rem;
-    }
-
-    /* ---------- MAIN CONTENT ---------- */
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    section h2 {
-      color: #111;
-      border-left: 4px solid #1a73e8;
-      padding-left: 10px;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
-    }
-
-    section p {
-      color: #444;
-      font-size: 1.05rem;
-    }
-
-    /* ---------- CONTACT SECTION ---------- */
-    .contact-section {
-      background: #ffffff;
-      padding: 80px 20px;
-      text-align: center;
-      border-top: 1px solid #e0e0e0;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .contact-section h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    .contact-section p {
-      color: #555;
-      font-size: 1.05rem;
-      margin-bottom: 30px;
-    }
-
-    .contact-icons {
+    .video {
+      flex: 0 0 auto;
+      width: 350px;
+      height: 200px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
       display: flex;
       justify-content: center;
-      gap: 25px;
+      align-items: center;
+    }
+    
+    .video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
     }
 
-    .contact-icons a svg {
-      width: 40px;
-      height: 40px;
-      color: #666;
-      transition: all 0.3s ease;
+    /* scroll buttons (inside wrapper) */
+    .scroll-btn {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.5);
+      color:#fff;
+      border:none;
+      border-radius:50%;
+      width:34px;
+      height:34px;
+      cursor:pointer;
+      z-index:5;
+      display:none; /* shown by JS when needed */
     }
+    .scroll-btn.left { left:6px; }    /* moved inside wrapper */
+    .scroll-btn.right { right:6px; }
 
-    .contact-icons a:hover svg {
-      color: #1a73e8;
-      transform: translateY(-4px);
+    /* ---------- NAV ICONS ---------- */
+    .nav-icons { display:flex; gap:10px; align-items:center; }
+    .nav-icon {
+      width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center;
+      border-radius:8px; background:var(--card); border:1px solid var(--border); color:var(--muted); text-decoration:none;
+      transition:all .18s ease;
     }
+    .nav-icon svg { width:18px; height:18px; display:block; fill:currentColor; }
+    .nav-icon:hover { transform:translateY(-3px); box-shadow:0 6px 16px rgba(0,0,0,0.04); }
 
-    /* ---------- FOOTER ---------- */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #e0e0e0;
-      background: #ffffff;
+    /* hover colors */
+    .nav-icon.github:hover { color:#181717; }   /* GitHub black */
+    .nav-icon.linkedin:hover { color:#0a66c2; } /* LinkedIn blue */
+    .nav-icon.email:hover { color:#d93025; }    /* Email red */
+
+    /* ---------- CONTACT CARD (enhanced) ---------- */
+    .contact-card {
+      position:sticky;
+      top:24px;
+      text-align:center;
+      padding:28px 20px;
+      border-radius:12px;
+      background:var(--card);
+      border:1px solid var(--border);
+      box-shadow:0 3px 10px rgba(0,0,0,0.03);
+      animation:fadeInUp 0.9s ease forwards;
+      opacity:0; transform:translateY(18px);
     }
+    .contact-card h3{margin:0 0 8px;font-size:1.2rem;color:var(--accent)}
+    .contact-card p{color:var(--muted);margin:0 0 14px;font-size:0.95rem}
+    .contact-email {display:inline-block;color:var(--primary);font-weight:600;text-decoration:none;padding:8px 14px;border:1px solid var(--primary);border-radius:8px;transition:all .2s ease}
+    .contact-email:hover{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(26,115,232,0.18);transform:translateY(-3px)}
 
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+    .contact-icons {display:flex;justify-content:center;gap:14px;margin-top:14px}
+    .contact-icons a {display:inline-flex;width:40px;height:40px;border-radius:8px;background:var(--card);border:1px solid var(--border);align-items:center;justify-content:center;color:var(--muted);transition:all .18s ease;text-decoration:none}
+    .contact-icons svg{width:18px;height:18px;fill:currentColor}
 
-      .contact-icons svg {
-        width: 32px;
-        height: 32px;
-      }
+    /* hover colors for contact icons */
+    .contact-icons a.github:hover { color:#181717; transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,0.06) }
+    .contact-icons a.linkedin:hover { color:#0a66c2; transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,0.06) }
+    .contact-icons a.email:hover { color:#d93025; transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,0.06) }
 
-      nav {
-        flex-wrap: wrap;
-        gap: 15px;
-      }
+    @keyframes fadeInUp { to { opacity:1; transform:translateY(0);} }
+
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .video{height:200px;width:300px}
     }
   </style>
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-    <a href="https://github.com/yourgithubusername" target="_blank" aria-label="GitHub">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.27-.01-1.18-.02-2.13-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.72 1.26 3.38.96.1-.76.41-1.26.75-1.55-2.55-.29-5.23-1.28-5.23-5.72 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.18a10.94 10.94 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.1 0 4.46-2.68 5.42-5.24 5.71.42.36.8 1.09.8 2.2 0 1.59-.02 2.87-.02 3.26 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/>
-      </svg>
-    </a>
-    <a href="https://linkedin.com/in/yourlinkedinprofile" target="_blank" aria-label="LinkedIn">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5Zm.02 6.5H2V21h3V10Zm7.5 0h-3V21h3v-5.5c0-1.38.9-2.5 2.5-2.5s2.5 1.12 2.5 2.5V21h3v-6.5c0-3.04-2.46-5.5-5.5-5.5-1.58 0-2.98.65-4 1.7V10Z"/>
-      </svg>
-    </a>
-    <a href="mailto:yourname@email.com" aria-label="Email">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
-      </svg>
-    </a>
-  </nav>
-
-  <!-- HEADER -->
-  <header>
-    <h1>Ghulam Mustafa Rao</h1>
-    <p>Unity Game Developer | Full Stack Web Developer</p>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I’m Ghulam Mustafa Rao, a Unity Game Developer with experience in multiplayer systems, shaders, and mobile optimization. I also build full-stack web apps using the MERN stack.</p>
-    </section>
-
-    <!-- GALLERY PLACEHOLDER (unchanged) -->
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <p>Your gallery content remains exactly as before.</p>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-      <h2>Contact</h2>
-      <p>Let’s connect! You can find me here:</p>
-      <div class="contact-icons">
-        <a href="https://github.com/yourgithubusername" target="_blank" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.27-.01-1.18-.02-2.13-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.72 1.26 3.38.96.1-.76.41-1.26.75-1.55-2.55-.29-5.23-1.28-5.23-5.72 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.18a10.94 10.94 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.1 0 4.46-2.68 5.42-5.24 5.71.42.36.8 1.09.8 2.2 0 1.59-.02 2.87-.02 3.26 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/>
-          </svg>
-        </a>
-
-        <a href="https://linkedin.com/in/yourlinkedinprofile" target="_blank" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5Zm.02 6.5H2V21h3V10Zm7.5 0h-3V21h3v-5.5c0-1.38.9-2.5 2.5-2.5s2.5 1.12 2.5 2.5V21h3v-6.5c0-3.04-2.46-5.5-5.5-5.5-1.58 0-2.98.65-4 1.7V10Z"/>
-          </svg>
-        </a>
-
-        <a href="mailto:yourname@email.com" aria-label="Email">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
-          </svg>
-        </a>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="assets/profile.jpeg" alt="Profile" /></div>
+        <div><h1>Ghulam Mustafa Rao</h1><p class="lead">Unity Game Developer · Multiplayer · Mobile · AI</p></div>
       </div>
-    </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Ghulam Mustafa Rao. All rights reserved.
-  </footer>
+      <!-- NAV with icons (unchanged links) -->
+      <nav class="nav-icons" aria-label="social links">
+        <a class="nav-icon github" href="https://github.com/Ghulam-Mustafa-Rao" target="_blank" aria-label="GitHub">
+          <!-- GitHub SVG -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.1 1.4 3.8 1.1.1-.9.5-1.4.9-1.7-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.4 1.2-3.3 0-.3-.5-1.3.1-2.7 0 0 1-.3 3.4 1.2a12.1 12.1 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.4.1 2.4.1 2.7.7.9 1.2 2 1.2 3.3 0 4.4-2.7 5.4-5.3 5.7.5.4 1 1.2 1 2.4v3.6c0 .3.2.7.8.6A10.9 10.9 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
+        </a>
+
+        <a class="nav-icon linkedin" href="https://www.linkedin.com/in/ghulammustafarao/" target="_blank" aria-label="LinkedIn">
+          <!-- LinkedIn SVG -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zm.02 4.9H1v14h4V8.4zm7.5 0h-4v14h4v-7.5c0-2 2.5-2.2 2.5 0V22h4v-8.5c0-4.8-5.5-4.6-6.5-2.2v-2.9z"/></svg>
+        </a>
+
+        <a class="nav-icon email" href="mailto:ghulam.mustafa.rao.dev@gmail.com" aria-label="Email">
+          <!-- Email SVG -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="about">
+          <h2>About</h2>
+          <p id="about-text">Accomplished Unity Game Developer with 3+ years of coding experience in C# and Unity. Experienced in FPS, simulation, puzzle, PC, and blockchain games with advanced AI, optimized performance, and engaging mechanics. Skilled in monetization (Google Ads, AppLovin, IronSource), analytics (Firebase, Appsflyer, Game Analytics), and multiplayer systems (Photon, Mirror, Fusion 2).</p>
+          <div class="cv-actions">
+            <a class="btn btn-primary" href="Ghulam_Mustafa_Rao_Games.pdf" download>Download CV</a>
+          </div>          
+        </div>
+
+        <section class="projects">
+          <h2>Selected Projects</h2>
+          <!-- project cards inserted here -->
+        </section>
+      </div>
+
+      <!-- ENHANCED CONTACT: only this part changed visually -->
+      <aside style="width:100%;max-width:320px">
+        <div class="contact-card">
+          <h3>Contact</h3>
+          <p>Let's connect — email me for collaborations or opportunities.</p>
+          <a class="contact-email" href="mailto:ghulam.mustafa.rao.dev@gmail.com">ghulam.mustafa.rao.dev@gmail.com</a>
+
+          <div class="contact-icons" aria-hidden="false" role="navigation" style="margin-top:14px">
+            <a class="github" href="https://github.com/Ghulam-Mustafa-Rao" target="_blank" aria-label="GitHub">
+              <!-- github svg -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.1 1.4 3.8 1.1.1-.9.5-1.4.9-1.7-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.4 1.2-3.3 0-.3-.5-1.3.1-2.7 0 0 1-.3 3.4 1.2a12.1 12.1 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.4.1 2.4.1 2.7.7.9 1.2 2 1.2 3.3 0 4.4-2.7 5.4-5.3 5.7.5.4 1 1.2 1 2.4v3.6c0 .3.2.7.8.6A10.9 10.9 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
+            </a>
+
+            <a class="linkedin" href="https://www.linkedin.com/in/ghulammustafarao/" target="_blank" aria-label="LinkedIn">
+              <!-- linkedin svg -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zm.02 4.9H1v14h4V8.4zm7.5 0h-4v14h4v-7.5c0-2 2.5-2.2 2.5 0V22h4v-8.5c0-4.8-5.5-4.6-6.5-2.2v-2.9z"/></svg>
+            </a>
+
+            <a class="email" href="mailto:ghulam.mustafa.rao.dev@gmail.com" aria-label="Email">
+              <!-- email svg -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>Built with ❤️ by Ghulam Mustafa Rao • <span id="year"></span></footer>
+  </div>
+
+  <div class="lightbox" id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);align-items:center;justify-content:center;z-index:9999">
+    <img src="" alt="preview" style="max-width:90%;max-height:90%;border-radius:12px" />
+  </div>
+
+<script>
+/* --- load projects and build galleries --- */
+async function loadProjects(){
+  try{
+    const res = await fetch("GamesData.json");
+    const projects = await res.json();
+    const container = document.querySelector(".projects");
+    container.innerHTML = `<h2>Selected Projects</h2><div id="projects-container"></div>`;
+    const projectsContainer = container.querySelector("#projects-container");
+
+    projects.forEach(proj => {
+      const article = document.createElement("article");
+      article.className = "card";
+
+      const descItems = (proj.Description||"").split(";").map(s=>`<li>${s.trim()}</li>`).join("");
+      
+      article.innerHTML = `
+        <div class="meta">
+          <div class="title">${proj.Title}</div>
+          <div class="gallery-wrapper">
+            <button class="scroll-btn left" aria-label="scroll left">‹</button>
+            <div class="gallery" data-folder="${proj.Folder}">
+              ${proj.Videos && proj.Videos.length > 0
+                ? proj.Videos.map(v =>
+                    `<div class="video">
+                      <iframe
+                        src="https://www.youtube.com/embed/${v.split("v=")[1].split("&")[0]}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                    </div>` 
+                  ).join("")
+                : ""
+              }
+            </div>
+            <button class="scroll-btn right" aria-label="scroll right">›</button>
+          </div>
+          <ul style="font-size:13px;color:var(--muted);margin-top:8px">${descItems}</ul>
+          <div style="margin-top:10px">            
+              ${proj.StoreLink && proj.StoreLink.trim() !== ""
+                ? `<a class="btn btn-primary" href="${proj.StoreLink}" target="_blank" rel="noreferrer">${proj.ButtonText || "View Project"}</a>`
+                : ""
+          }
+          </div>
+        </div>
+      `;
+      projectsContainer.appendChild(article);
+    });
+
+    // After DOM created, populate each gallery with images and wire buttons
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+
+document.querySelectorAll(".gallery").forEach(gallery => {
+  const folder = gallery.dataset.folder;
+  if (!folder) return;
+
+  // Helper to update scroll-button visibility
+  const wrapper = gallery.parentElement;
+  const btnLeft = wrapper.querySelector(".scroll-btn.left");
+  const btnRight = wrapper.querySelector(".scroll-btn.right");
+
+  function updateButtonsVisibility() {
+    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+    if (maxScroll <= 1) { // nothing to scroll
+      btnLeft.style.display = 'none';
+      btnRight.style.display = 'none';
+    } else {
+      btnLeft.style.display = gallery.scrollLeft > 5 ? 'block' : 'none';
+      btnRight.style.display = gallery.scrollLeft < maxScroll - 5 ? 'block' : 'none';
+    }
+  }
+
+  // Scroll actions
+  btnLeft.addEventListener('click', () => gallery.scrollBy({ left: -240, behavior: 'smooth' }));
+  btnRight.addEventListener('click', () => gallery.scrollBy({ left: 240, behavior: 'smooth' }));
+  gallery.addEventListener('scroll', updateButtonsVisibility);
+  window.addEventListener('resize', updateButtonsVisibility);
+
+  // Load images dynamically: 0.jpeg / 0.jpg / 0.webp ...
+  let i = 0;
+  const extensions = ["jpeg", "jpg", "png", "webp"];
+
+  function tryLoad() {
+    let tried = 0; // reset for each image
+
+    function tryNextExtension() {
+      if (tried >= extensions.length) {
+        // ❌ No extension worked → stop this index and assume no more images
+        setTimeout(updateButtonsVisibility, 40);
+        return;
+      }
+
+      const ext = extensions[tried];
+      const path = `${folder}/${i}.${ext}`;
+      const img = new Image();
+      img.src = path;
+
+      img.onload = () => {
+        const div = document.createElement('div');
+        div.className = 'screenshot';
+        div.appendChild(img);
+
+        // Adjust size dynamically based on orientation
+        if (img.naturalWidth > img.naturalHeight) {
+          div.style.width = '350px';
+          div.style.height = '200px';
+        } else {
+          div.style.width = '200px';
+          div.style.height = '350px';
+        }
+
+        // Insert image after any videos
+        const lastVideo = gallery.querySelector('.video:last-of-type');
+        if (lastVideo) {
+          gallery.insertBefore(div, lastVideo.nextSibling);
+        } else {
+          gallery.appendChild(div);
+        }
+
+        // Lightbox click
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'flex';
+          lightboxImg.src = img.src;
+        });
+
+        setTimeout(updateButtonsVisibility, 40);
+
+        i++; // ✅ next index
+        tryLoad(); // ✅ load next image
+      };
+
+      img.onerror = () => {
+        tried++;
+        tryNextExtension(); // ✅ try next extension for same index
+      };
+    }
+
+    tryNextExtension(); // start trying extensions for current image
+  }
+
+  tryLoad();
+
+  // Lightbox click to close
+  lightbox.addEventListener('click', () => lightbox.style.display = 'none');
+});
+
+  } catch(e){
+    console.error("Error loading GamesData.json:", e);
+  }
+}
+
+loadProjects();
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
