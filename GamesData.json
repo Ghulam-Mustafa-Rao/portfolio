@@ -4,6 +4,8 @@
     "Folder": "assets/img/Metaclash Undead",
     "StoreLink": "",
     "ButtonText": "",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
     "Description": "Built for PC; Humans vs Zombies Multiplayer game; Headless server; Mirror is used for multiplayer; Invector is used for charaters and AI; Profiler Optimization,Memeory optimization",
     "Videos": [
     "https://www.youtube.com/watch?v=bxShKkCGCeU",
@@ -16,6 +18,8 @@
     "Folder": "assets/img/Paint Olympus",
     "StoreLink": "https://cdn.vulcanforged.com/game-launcher/VulcanForgedDApps.exe",
     "ButtonText": "Downlaod from Launcher",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
     "Description": "Built for PC; Multiplayer game (Photon Fusion); APIs integration; Web3 Game; TPS; Dedicated server; Ready playerme ; Profiler Optimization,Memeory optimization",
     "Videos": [
 	"https://www.youtube.com/watch?v=BkxN7FofQPM",
@@ -28,6 +32,8 @@
     "Folder": "assets/img/Donut Empire Tycoon",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.mt.donut.please.idle.tycoon.games",
     "ButtonText": "View on Play Store",
+	"StoreLink_b": "https://apps.apple.com/zm/app/idle-flavor-rush-food-games/id6742486496",
+    "ButtonText_b": "View on Apple Store",
     "Description": "Built from scratch with unique management mechanics; Added toilets, pickups (car & in-person), tables; Staff management, player stats & upgrades; Different AI behaviours for immersion; Monetization: In-app purchases",
     "Videos": [
 	"https://www.youtube.com/watch?v=y7O7TY6GNR8"
@@ -38,6 +44,8 @@
     "Folder": "assets/img/Scary Halen Naughty Kid Game",
     "StoreLink": "https://apkpure.com/scary-halen-naughty-kid-game/com.pw.scaryhalen.babysitter.naughtyboy",
     "ButtonText": "View on APKPure",
+	"StoreLink_b": "https://apps.apple.com/zm/app/hide-and-sneak-adventures/id6754841398",
+    "ButtonText_b": "View on Apple Store",
     "Description": "Built from scratch with immersive cutscenes (Unity Timeline + Cinemachine); Daily Rewards, Spin Wheel, Ads; Power-ups: Hint, 2x Speed, Invisible, Shape-Shift",
     "Videos": [
   ]
@@ -47,6 +55,8 @@
     "Folder": "assets/img/Color Sort - Multiplayer PvP",
     "StoreLink": "https://drive.google.com/file/d/1qyJOsHpTqWo77vftiG3-5P_i7KYdd4La/view?usp=sharing",
     "ButtonText": "Download Demo",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
     "Description": "Built from scratch with multiplayer modes; AI opponents & real-player PvP; Powers: Undo, Hint, Add Glass, Tap-to-Drain; Leaderboard, Shop, VIP Subscription; Spin Wheel, Ads Integration",
     "Videos": [
 	"https://www.youtube.com/watch?v=KoqPlzk0mBM"
@@ -57,6 +67,8 @@
     "Folder": "assets/img/Ecoscape",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.fg.ecoscape.tycoon.games.pinpull&hl=en",
     "ButtonText": "View on Play Store",
+	"StoreLink_b": "https://apps.apple.com/zm/app/ecoscape-city-tycoon-game/id6503245020",
+    "ButtonText_b": "View on Apple Store",
     "Description": "Built from scratch; Created all mechanincs and levels of tasks; Grass cutting,Probs and Tiles placement,Pool Cleaning,Garbage Collection ( Vacuum Cleaner ),Watering the ground, Floor Cleaning ]",
     "Videos": [
 	"https://www.youtube.com/watch?v=4YLOVfw9ueU",
@@ -69,6 +81,8 @@
     "Folder": "assets/img/FPS Shooting Game",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield",
     "ButtonText": "View on Play Store",
+	"StoreLink_b": "https://apps.apple.com/zm/app/fps-battle-royale-gun-games/id6447664927",
+    "ButtonText_b": "View on Apple Store",
     "Description": "Enhanced controls & AI; New Machine Gun Mode & TDM; Day/Night Lighting & Shooting Range; In-App Purchases, Ads, Profiler Optimization; Reduced ANRs",
     "Videos": [
   ]
@@ -78,6 +92,8 @@
     "Folder": "assets/img/Commando Gun Shooting",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.fps.shooting.counterattack.commandomissiongames",
     "ButtonText": "View on Play Store",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
     "Description": "Enhanced overall controls; Improved AI for more realistic gameplay; Team Deathmatch (TDM) mode; Day/Night lighting system",
     "Videos": [
   ]
@@ -87,6 +103,8 @@
     "Folder": "assets/img/Doctor Simulator Surgery",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.dino.hunting.dinosaur.hunt.best.sniper.shooting.games",
     "ButtonText": "View on Play Store",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
     "Description": "Fixed gameplay bugs for stability; Integrated Ads for monetization",
     "Videos": [
   ]
@@ -96,6 +114,8 @@
     "Folder": "assets/img/Bike Stunt",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.bike.stunt.d.master.games",
     "ButtonText": "View on Play Store",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
     "Description": "Fixed gameplay bugs for stability; Integrated Ads for monetization",
     "Videos": [
   ]
@@ -105,6 +125,8 @@
     "Folder": "assets/img/Construction Crush",
     "StoreLink": "https://apkpure.com/construction-crush/com.RSS.ConstructionCrush",
     "ButtonText": "View on APKPure",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
     "Description": "Built from scratch with complete UI/UX design; Level design: 100+ levels with varied tiles (slime, cemented, etc.); Power-ups: Break a tile, multiple boosters",
     "Videos": [
   ]
