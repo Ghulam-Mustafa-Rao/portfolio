@@ -432,6 +432,12 @@
       ${proj.ButtonText || "View Project"}
     </a>
   </div>` : ""}
+   ${proj.StoreLink_b ? `
+  <div class="btn-container">
+    <a class="btn btn-primary" href="${proj.StoreLink_b}" target="_blank">
+      ${proj.ButtonText_b || "View Project"}
+    </a>
+  </div>` : ""}
           </div>`;
         projectsContainer.appendChild(article);
       });
