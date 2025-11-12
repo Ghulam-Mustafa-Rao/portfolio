@@ -426,11 +426,16 @@
               <button class="scroll-btn right">›</button>
             </div>
             <ul>${descItems}</ul>
-            ${proj.StoreLink ? `
-  <div class="btn-container">
-    <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">
-      ${proj.ButtonText || "View Project"}
-    </a>
+           ${proj.StoreLink ? `
+              <div class="btn-container">
+              <a class="btn btn-primary" href="${proj.StoreLink}" target="_blank">
+              ${proj.ButtonText || "View Project"}
+              </a>
+           ${proj.StoreLink_b ? `
+              <div class="btn-container">
+              <a class="btn btn-primary" href="${proj.StoreLink_b}" target="_blank">
+              ${proj.ButtonText_b || "View Project"}
+              </a>
   </div>` : ""}            
           </div>`;
         projectsContainer.appendChild(article);
