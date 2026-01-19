@@ -1,5 +1,17 @@
 [
   {
+	"Title": "Annoying Boss Punch",
+    "Folder": "assets/img/Annoying Boss Punch",
+    "StoreLink": "https://play.google.com/store/apps/details?id=com.boss.punch.game.fs",
+    "ButtonText": "View on Play Store",
+	"StoreLink_b": "",
+    "ButtonText_b": "",
+    "Description": "Built from scratch; Monetization: In-app purchases, Admob with different mediatios; Firebase added for analytics,remote config and revenue logs",
+    "Videos": [
+	"https://youtu.be/Yc6mavYiXmM?si=Y61MlrvYxkWZxIrb"
+  ]
+  },
+  {
     "Title": "Metaclash Undead",
     "Folder": "assets/img/Metaclash Undead",
     "StoreLink": "",
