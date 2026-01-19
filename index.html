@@ -420,6 +420,27 @@
   </div>
 
   <script>
+function getYouTubeId(url) {
+  if (!url || typeof url !== "string") return null;
+
+  // youtu.be/ID
+  if (url.includes("youtu.be/")) {
+    return url.split("youtu.be/")[1].split("?")[0];
+  }
+
+  // watch?v=ID
+  if (url.includes("v=")) {
+    return url.split("v=")[1].split("&")[0];
+  }
+
+  // embed/ID
+  if (url.includes("embed/")) {
+    return url.split("embed/")[1].split("?")[0];
+  }
+
+  return null;
+} 
+    
   async function loadProjects() {
     try {
       const res = await fetch("GamesData.json");
@@ -439,10 +460,24 @@
             <div class="gallery-wrapper">
               <button class="scroll-btn left">‹</button>
               <div class="gallery" data-folder="${proj.Folder}">
-                ${(proj.Videos || []).map(v => `
-                  <div class="video">
-                    <iframe src="https://www.youtube.com/embed/${v.split("v=")[1].split("&")[0]}" allowfullscreen></iframe>
-                  </div>`).join("")}
+                ${(proj.Videos || []).map(v => 
+                 {
+
+            const videoId = getYouTubeId(v);
+
+            if (!videoId) {
+              console.warn("Invalid video URL in project:", proj.Title, v);
+              return "";
+            }
+
+            return `
+              <div class="video">
+                <iframe
+                  src="https://www.youtube.com/embed/${videoId}"
+                  allowfullscreen>
+                </iframe>
+              </div>`;
+          }).join("")}
               </div>
               <button class="scroll-btn right">›</button>
             </div>
