@@ -429,6 +429,7 @@
       container.appendChild(projectsContainer);
 
       projects.forEach(proj => {
+        console.log("Rendering project:", proj.Title);
         const article = document.createElement("article");
         article.className = "card";
         const descItems = (proj.Description || "").split(";").map(s => `<li>${s.trim()}</li>`).join("");
