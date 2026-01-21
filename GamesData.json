@@ -4,8 +4,8 @@
     "Folder": "assets/img/Annoying Boss Punch",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.boss.punch.game.fs",
     "ButtonText": "View on Play Store",
-	"StoreLink_b": "",
-    "ButtonText_b": "",
+	"StoreLink_b": "https://apps.apple.com/us/app/crazy-boss-punching-game-3d/id6757854340",
+    "ButtonText_b": "View on Apple Store",
     "Description": "Built from scratch; Monetization: In-app purchases, Admob with different mediatios; Firebase added for analytics,remote config and revenue logs",
     "Videos": [
 	"https://youtu.be/Yc6mavYiXmM?si=Y61MlrvYxkWZxIrb"
