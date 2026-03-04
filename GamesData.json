@@ -16,7 +16,7 @@
       "Remote Config",
       "Mobile optimization"
     ],
-    "Description": "Fully developed from scratch with physics-driven combat and responsive animation systems. Implemented complete monetization pipeline using AdMob mediation and Firebase (analytics, remote config, revenue tracking). Optimized for smooth performance across mobile devices.",
+    "Description": "Fully developed from scratch with physics-driven combat and responsive animation systems; Implemented complete monetization pipeline using AdMob mediation and Firebase (analytics, remote config, revenue tracking); Optimized for smooth performance across mobile devices;",
     "Videos": [
       "https://youtu.be/Yc6mavYiXmM?si=Y61MlrvYxkWZxIrb"
     ]
@@ -38,7 +38,7 @@
       "Unity Profiler",
       "Invector integration"
     ],
-    "Description": "PC multiplayer Humans vs Zombies experience featuring headless dedicated server architecture. Implemented Mirror networking, advanced AI behaviors, and deep profiling for memory and performance optimization. Focused on scalable and stable multiplayer gameplay.",
+    "Description": "PC multiplayer Humans vs Zombies experience featuring headless dedicated server architecture; Implemented Mirror networking and advanced AI behaviors; Performed deep profiling for memory and performance optimization; Focused on scalable and stable multiplayer gameplay;",
     "Videos": [
       "https://www.youtube.com/watch?v=bxShKkCGCeU",
       "https://www.youtube.com/watch?v=xwOLDVZaToQ",
@@ -62,7 +62,7 @@
       "Memory profiling",
       "Web3 integration"
     ],
-    "Description": "Third-person multiplayer Web3 game built with Photon Fusion and dedicated servers. Integrated external APIs and Ready Player Me avatars. Optimized network performance and memory usage for scalable real-time multiplayer gameplay.",
+    "Description": "Third-person multiplayer Web3 game built with Photon Fusion and dedicated servers; Integrated external APIs and Ready Player Me avatars; Optimized network performance and memory usage for scalable real-time multiplayer gameplay;",
     "Videos": [
       "https://www.youtube.com/watch?v=BkxN7FofQPM",
       "https://www.youtube.com/watch?v=ogGJOusIpjQ",
@@ -86,7 +86,7 @@
       "Unity C#",
       "Gameplay systems"
     ],
-    "Description": "Tycoon simulation built entirely from scratch featuring custom AI systems for employees, customers, VIPs, and vehicle flow. Implemented environment interactions, land progression, economy balancing, and player upgrades with strong focus on scalable AI and mobile performance.",
+    "Description": "Tycoon simulation built entirely from scratch featuring custom AI systems; Designed behaviors for employees, customers, VIP customers, and vehicle flow; Implemented environment interactions, land progression, economy balancing, and player upgrades; Strong focus on scalable AI architecture and mobile performance;",
     "Videos": [
       "https://www.youtube.com/watch?v=y7O7TY6GNR8"
     ]
@@ -108,7 +108,7 @@
       "Spin wheel",
       "Mobile optimization"
     ],
-    "Description": "Stealth puzzle game developed from scratch with cinematic cutscenes using Timeline and Cinemachine. Implemented LiveOps systems including daily rewards, spin wheel, and multiple power-ups to improve retention and engagement.",
+    "Description": "Stealth puzzle game developed from scratch; Implemented cinematic cutscenes using Timeline and Cinemachine; Built LiveOps systems including daily rewards and spin wheel; Designed multiple power-ups to improve retention and engagement;",
     "Videos": []
   },
   {
@@ -128,7 +128,7 @@
       "Ads integration",
       "Unity C#"
     ],
-    "Description": "Puzzle game built from scratch featuring AI opponents and real-time PvP multiplayer. Implemented full meta systems including leaderboard, shop, VIP subscription, and gameplay powers. Optimized for smooth mobile gameplay.",
+    "Description": "Puzzle game built from scratch featuring AI opponents and real-time PvP multiplayer; Implemented full meta systems including leaderboard, shop, and VIP subscription; Designed gameplay powers and optimized for smooth mobile performance;",
     "Videos": [
       "https://www.youtube.com/watch?v=KoqPlzk0mBM"
     ]
@@ -150,7 +150,7 @@
       "Unity C#",
       "Gameplay programming"
     ],
-    "Description": "Complete gameplay framework developed from scratch including custom character controller, animation pipeline, task systems, and level progression. Implemented multiple interactive activities with customized particles and prop animations.",
+    "Description": "Complete gameplay framework developed from scratch including custom character controller and animation pipeline; Implemented multiple interactive task systems and handcrafted levels; Added customized particle effects and prop animations;",
     "Videos": [
       "https://www.youtube.com/watch?v=4YLOVfw9ueU",
       "https://www.youtube.com/watch?v=pAfd9yHsgRw",
@@ -174,7 +174,7 @@
       "ANR reduction",
       "Unity Profiler"
     ],
-    "Description": "Enhanced FPS gameplay by improving player controls and enemy AI. Built a new machine gun mode from scratch and expanded TDM gameplay. Implemented dynamic day/night lighting and significantly reduced ANRs through deep profiling and optimization.",
+    "Description": "Enhanced FPS gameplay by improving player controls and enemy AI; Built a new machine gun mode from scratch and expanded TDM gameplay; Implemented dynamic day/night lighting; Significantly reduced ANRs through deep profiling and optimization;",
     "Videos": []
   }
 ]
