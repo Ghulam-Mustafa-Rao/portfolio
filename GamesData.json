@@ -1,146 +1,180 @@
 [
   {
-	"Title": "Annoying Boss Punch",
+    "Title": "Annoying Boss Punch",
     "Folder": "assets/img/Annoying Boss Punch",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.boss.punch.game.fs",
     "ButtonText": "View on Play Store",
-	"StoreLink_b": "https://apps.apple.com/us/app/crazy-boss-punching-game-3d/id6757854340",
+    "StoreLink_b": "https://apps.apple.com/us/app/crazy-boss-punching-game-3d/id6757854340",
     "ButtonText_b": "View on Apple Store",
-    "Description": "Built from scratch; Monetization: In-app purchases, Admob with different mediatios; Firebase added for analytics,remote config and revenue logs",
+    "Tags": ["Mobile", "Physics", "Casual", "Animation", "Monetization"],
+    "SkillHighlights": [
+      "Unity C#",
+      "Physics-based combat",
+      "Animation systems",
+      "AdMob mediation",
+      "Firebase Analytics",
+      "Remote Config",
+      "Mobile optimization"
+    ],
+    "Description": "Fully developed from scratch with physics-driven combat and responsive animation systems. Implemented complete monetization pipeline using AdMob mediation and Firebase (analytics, remote config, revenue tracking). Optimized for smooth performance across mobile devices.",
     "Videos": [
-	"https://youtu.be/Yc6mavYiXmM?si=Y61MlrvYxkWZxIrb"
-  ]
+      "https://youtu.be/Yc6mavYiXmM?si=Y61MlrvYxkWZxIrb"
+    ]
   },
   {
     "Title": "Metaclash Undead",
     "Folder": "assets/img/Metaclash Undead",
     "StoreLink": "",
     "ButtonText": "",
-	"StoreLink_b": "",
+    "StoreLink_b": "",
     "ButtonText_b": "",
-    "Description": "Built for PC; Humans vs Zombies Multiplayer game; Headless server; Mirror is used for multiplayer; Invector is used for charaters and AI; Profiler Optimization,Memeory optimization",
+    "Tags": ["PC", "Multiplayer", "Networking", "AI", "Shooter"],
+    "SkillHighlights": [
+      "Mirror Networking",
+      "Headless server",
+      "Multiplayer architecture",
+      "AI behavior systems",
+      "Memory optimization",
+      "Unity Profiler",
+      "Invector integration"
+    ],
+    "Description": "PC multiplayer Humans vs Zombies experience featuring headless dedicated server architecture. Implemented Mirror networking, advanced AI behaviors, and deep profiling for memory and performance optimization. Focused on scalable and stable multiplayer gameplay.",
     "Videos": [
-    "https://www.youtube.com/watch?v=bxShKkCGCeU",
-    "https://www.youtube.com/watch?v=xwOLDVZaToQ",
-    "https://www.youtube.com/watch?v=dEcQRPlqZwU"    
-  ]
+      "https://www.youtube.com/watch?v=bxShKkCGCeU",
+      "https://www.youtube.com/watch?v=xwOLDVZaToQ",
+      "https://www.youtube.com/watch?v=dEcQRPlqZwU"
+    ]
   },
   {
     "Title": "Paint Olympus",
     "Folder": "assets/img/Paint Olympus",
     "StoreLink": "https://cdn.vulcanforged.com/game-launcher/VulcanForgedDApps.exe",
     "ButtonText": "Downlaod from Launcher",
-	"StoreLink_b": "",
+    "StoreLink_b": "",
     "ButtonText_b": "",
-    "Description": "Built for PC; Multiplayer game (Photon Fusion); APIs integration; Web3 Game; TPS; Dedicated server; Ready playerme ; Profiler Optimization,Memeory optimization",
+    "Tags": ["PC", "Multiplayer", "Web3", "TPS", "Networking"],
+    "SkillHighlights": [
+      "Photon Fusion",
+      "Dedicated servers",
+      "Ready Player Me",
+      "API integration",
+      "Network optimization",
+      "Memory profiling",
+      "Web3 integration"
+    ],
+    "Description": "Third-person multiplayer Web3 game built with Photon Fusion and dedicated servers. Integrated external APIs and Ready Player Me avatars. Optimized network performance and memory usage for scalable real-time multiplayer gameplay.",
     "Videos": [
-	"https://www.youtube.com/watch?v=BkxN7FofQPM",
-    "https://www.youtube.com/watch?v=ogGJOusIpjQ",    
-    "https://www.youtube.com/watch?v=xFq8-TzF_sM"    
-  ]
+      "https://www.youtube.com/watch?v=BkxN7FofQPM",
+      "https://www.youtube.com/watch?v=ogGJOusIpjQ",
+      "https://www.youtube.com/watch?v=xFq8-TzF_sM"
+    ]
   },
   {
     "Title": "Donut Empire Tycoon",
     "Folder": "assets/img/Donut Empire Tycoon",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.mt.donut.please.idle.tycoon.games",
     "ButtonText": "View on Play Store",
-	"StoreLink_b": "https://apps.apple.com/zm/app/idle-flavor-rush-food-games/id6742486496",
+    "StoreLink_b": "https://apps.apple.com/zm/app/idle-flavor-rush-food-games/id6742486496",
     "ButtonText_b": "View on Apple Store",
-    "Description": "Built from scratch with unique management mechanics; Added toilets, pickups (car & in-person), tables; Staff management, player stats & upgrades; Different AI behaviours for immersion; Monetization: In-app purchases",
+    "Tags": ["Mobile", "AI", "Simulation", "Tycoon", "Management"],
+    "SkillHighlights": [
+      "Custom AI architecture",
+      "NPC behavior systems",
+      "Economy balancing",
+      "Player progression",
+      "Mobile optimization",
+      "Unity C#",
+      "Gameplay systems"
+    ],
+    "Description": "Tycoon simulation built entirely from scratch featuring custom AI systems for employees, customers, VIPs, and vehicle flow. Implemented environment interactions, land progression, economy balancing, and player upgrades with strong focus on scalable AI and mobile performance.",
     "Videos": [
-	"https://www.youtube.com/watch?v=y7O7TY6GNR8"
-  ]
+      "https://www.youtube.com/watch?v=y7O7TY6GNR8"
+    ]
   },
   {
     "Title": "Naugty Boy House Escape Game",
     "Folder": "assets/img/Scary Halen Naughty Kid Game",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.naughty.boy.house.escape.gs",
     "ButtonText": "View on Play Store",
-	"StoreLink_b": "https://apps.apple.com/zm/app/hide-and-sneak-adventures/id6754841398",
+    "StoreLink_b": "https://apps.apple.com/zm/app/hide-and-sneak-adventures/id6754841398",
     "ButtonText_b": "View on Apple Store",
-    "Description": "Built from scratch with immersive cutscenes (Unity Timeline + Cinemachine); Daily Rewards, Spin Wheel, Ads; Power-ups: Hint, 2x Speed, Invisible, Shape-Shift",
-    "Videos": [
-  ]
+    "Tags": ["Mobile", "Stealth", "Puzzle", "Cinematics", "LiveOps"],
+    "SkillHighlights": [
+      "Unity Timeline",
+      "Cinemachine",
+      "Power-up systems",
+      "LiveOps features",
+      "Daily rewards",
+      "Spin wheel",
+      "Mobile optimization"
+    ],
+    "Description": "Stealth puzzle game developed from scratch with cinematic cutscenes using Timeline and Cinemachine. Implemented LiveOps systems including daily rewards, spin wheel, and multiple power-ups to improve retention and engagement.",
+    "Videos": []
   },
   {
     "Title": "Color Sort - Multiplayer PvP",
     "Folder": "assets/img/Color Sort - Multiplayer PvP",
     "StoreLink": "https://drive.google.com/file/d/1qyJOsHpTqWo77vftiG3-5P_i7KYdd4La/view?usp=sharing",
     "ButtonText": "Download Demo",
-	"StoreLink_b": "",
+    "StoreLink_b": "",
     "ButtonText_b": "",
-    "Description": "Built from scratch with multiplayer modes; AI opponents & real-player PvP; Powers: Undo, Hint, Add Glass, Tap-to-Drain; Leaderboard, Shop, VIP Subscription; Spin Wheel, Ads Integration",
+    "Tags": ["Mobile", "Multiplayer", "Puzzle", "PvP", "AI"],
+    "SkillHighlights": [
+      "Multiplayer systems",
+      "AI opponents",
+      "Leaderboard systems",
+      "VIP subscription",
+      "Gameplay powers",
+      "Ads integration",
+      "Unity C#"
+    ],
+    "Description": "Puzzle game built from scratch featuring AI opponents and real-time PvP multiplayer. Implemented full meta systems including leaderboard, shop, VIP subscription, and gameplay powers. Optimized for smooth mobile gameplay.",
     "Videos": [
-	"https://www.youtube.com/watch?v=KoqPlzk0mBM"
-  ]
+      "https://www.youtube.com/watch?v=KoqPlzk0mBM"
+    ]
   },
   {
     "Title": "Ecoscape",
     "Folder": "assets/img/Ecoscape",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.fg.ecoscape.tycoon.games.pinpull&hl=en",
     "ButtonText": "View on Play Store",
-	"StoreLink_b": "https://apps.apple.com/zm/app/ecoscape-city-tycoon-game/id6503245020",
+    "StoreLink_b": "https://apps.apple.com/zm/app/ecoscape-city-tycoon-game/id6503245020",
     "ButtonText_b": "View on Apple Store",
-    "Description": "Built from scratch; Created all mechanincs and levels of tasks; Grass cutting,Probs and Tiles placement,Pool Cleaning,Garbage Collection ( Vacuum Cleaner ),Watering the ground, Floor Cleaning",
+    "Tags": ["Mobile", "Simulation", "Controller", "Particles", "Systems"],
+    "SkillHighlights": [
+      "Custom character controller",
+      "Task systems",
+      "Level design",
+      "Particle systems",
+      "Prop animation",
+      "Unity C#",
+      "Gameplay programming"
+    ],
+    "Description": "Complete gameplay framework developed from scratch including custom character controller, animation pipeline, task systems, and level progression. Implemented multiple interactive activities with customized particles and prop animations.",
     "Videos": [
-	"https://www.youtube.com/watch?v=4YLOVfw9ueU",
-        "https://www.youtube.com/watch?v=pAfd9yHsgRw",
-        "https://www.youtube.com/watch?v=l6lQtLGjbS4"
-  ]
+      "https://www.youtube.com/watch?v=4YLOVfw9ueU",
+      "https://www.youtube.com/watch?v=pAfd9yHsgRw",
+      "https://www.youtube.com/watch?v=l6lQtLGjbS4"
+    ]
   },
   {
     "Title": "FPS Shooting Game",
     "Folder": "assets/img/FPS Shooting Game",
     "StoreLink": "https://play.google.com/store/apps/details?id=com.maritime.commando.shooting.battlefield",
     "ButtonText": "View on Play Store",
-	"StoreLink_b": "https://apps.apple.com/zm/app/fps-battle-royale-gun-games/id6447664927",
+    "StoreLink_b": "https://apps.apple.com/zm/app/fps-battle-royale-gun-games/id6447664927",
     "ButtonText_b": "View on Apple Store",
-    "Description": "Enhanced controls & AI; New Machine Gun Mode & TDM; Day/Night Lighting & Shooting Range; In-App Purchases, Ads, Profiler Optimization; Reduced ANRs",
-    "Videos": [
-  ]
-  },
-  {
-    "Title": "Commando Gun Shooting",
-    "Folder": "assets/img/Commando Gun Shooting",
-    "StoreLink": "https://play.google.com/store/apps/details?id=com.fps.shooting.counterattack.commandomissiongames",
-    "ButtonText": "View on Play Store",
-	"StoreLink_b": "",
-    "ButtonText_b": "",
-    "Description": "Enhanced overall controls; Improved AI for more realistic gameplay; Team Deathmatch (TDM) mode; Day/Night lighting system",
-    "Videos": [
-  ]
-  },
-  {
-    "Title": "Doctor Simulator Surgery",
-    "Folder": "assets/img/Doctor Simulator Surgery",
-    "StoreLink": "https://play.google.com/store/apps/details?id=com.dino.hunting.dinosaur.hunt.best.sniper.shooting.games",
-    "ButtonText": "View on Play Store",
-	"StoreLink_b": "",
-    "ButtonText_b": "",
-    "Description": "Fixed gameplay bugs for stability; Integrated Ads for monetization",
-    "Videos": [
-  ]
-  },
-  {
-    "Title": "Bike Stunt",
-    "Folder": "assets/img/Bike Stunt",
-    "StoreLink": "https://play.google.com/store/apps/details?id=com.bike.stunt.d.master.games",
-    "ButtonText": "View on Play Store",
-	"StoreLink_b": "",
-    "ButtonText_b": "",
-    "Description": "Fixed gameplay bugs for stability; Integrated Ads for monetization",
-    "Videos": [
-  ]
-  },
-  {
-    "Title": "Construction Crush",
-    "Folder": "assets/img/Construction Crush",
-    "StoreLink": "https://apkpure.com/construction-crush/com.RSS.ConstructionCrush",
-    "ButtonText": "View on APKPure",
-	"StoreLink_b": "",
-    "ButtonText_b": "",
-    "Description": "Built from scratch with complete UI/UX design; Level design: 100+ levels with varied tiles (slime, cemented, etc.); Power-ups: Break a tile, multiple boosters",
-    "Videos": [
-  ]
+    "Tags": ["Mobile", "FPS", "AI", "TDM", "Optimization"],
+    "SkillHighlights": [
+      "FPS controller tuning",
+      "Enemy AI improvements",
+      "Machine gun mode",
+      "TDM systems",
+      "Day/Night lighting",
+      "ANR reduction",
+      "Unity Profiler"
+    ],
+    "Description": "Enhanced FPS gameplay by improving player controls and enemy AI. Built a new machine gun mode from scratch and expanded TDM gameplay. Implemented dynamic day/night lighting and significantly reduced ANRs through deep profiling and optimization.",
+    "Videos": []
   }
 ]
