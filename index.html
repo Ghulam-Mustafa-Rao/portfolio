@@ -146,6 +146,42 @@
   /* width: 100%; */
   margin-top: 12px; 
 }
+
+/* ===== Tags ===== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 6px 0;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(77,171,247,0.12);
+  border: 1px solid rgba(77,171,247,0.35);
+  color: #9fd3ff;
+  white-space: nowrap;
+}
+
+/* ===== Skill highlights ===== */
+.skills-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 10px 0;
+}
+
+.skill-chip {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--accent);
+}
+
     /* Center the button container wrapper */
 .btn-container-wrapper {
   display: flex; /* Flexbox for horizontal layout */
@@ -454,9 +490,17 @@ function getYouTubeId(url) {
         const article = document.createElement("article");
         article.className = "card";
         const descItems = (proj.Description || "").split(";").map(s => `<li>${s.trim()}</li>`).join("");
+
+
+        const tagsHtml = (proj.Tags || []).map(t => `<span class="tag">${t}</span>`).join("");
+        const skillsHtml = (proj.SkillHighlights || []).map(s => `<span class="skill-chip">${s}</span>`).join("");
+
+
         article.innerHTML = `
           <div class="meta">
             <div class="title">${proj.Title}</div>
+            <div class="tags">${tagsHtml}</div>
+            <div class="skills-mini">${skillsHtml}</div>
             <div class="gallery-wrapper">
               <button class="scroll-btn left">‹</button>
               <div class="gallery" data-folder="${proj.Folder}">
